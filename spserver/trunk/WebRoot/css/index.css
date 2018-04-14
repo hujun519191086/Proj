@@ -1,0 +1,293 @@
+body {
+	margin: 0px;
+	margin-bottom: 100px;
+}
+
+#search {
+	padding-left: 354px;
+	padding-right: 338px;
+}
+
+#title {
+	height: 30px;
+	background-color: #cccccc;
+	padding-right: 338px;
+	padding-left: 354px;
+}
+
+.title_left {
+	vertical-align: middle;
+	float: left;
+	font-size: 12px;
+	color: #999999;
+	line-height: 30px;
+}
+
+.title_right {
+	float: right;
+	height: 30px;
+}
+
+#login {
+	text-decoration: none;
+	display: block;
+	font-size: 12px;
+	color: #f63854;
+	float: left;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+#register {
+	text-decoration: none;
+	vertical-align: middle;
+	display: block;
+	float: left;
+	margin-left: 6px;
+	color: #999999;
+	font-size: 12px;
+	line-height: 30px;
+}
+
+#line_title {
+	margin-left: 12px;
+	width: 1px;
+	float: left;
+	background-color: #999999;
+	height: 12px;
+	margin-top: 9px;
+}
+
+#myInfo {
+	text-decoration: none;
+	line-height: 30px;
+	vertical-align: middle;
+	display: block;
+	float: left;
+	margin-left: 11px;
+	color: #999999;
+	font-size: 12px;
+}
+
+#right_img {
+	margin-left: 6px;
+	width: 10px;
+	height: 6px;
+	width: 10px;
+}
+
+#search {
+	height: 100;
+}
+
+#img_logo {
+	margin: 0 auto;
+	margin-top: 32px;
+}
+
+#search_right {
+	margin: 0 auto;
+	margin-top: 32px;
+	float: right;
+}
+
+#search_text {
+	width: 356px;
+	height: 36px;
+}
+
+#search_img {
+	width: 24px;
+	height: 24px;
+	margin-top: 6px;
+}
+
+#div_search {
+	float: left;
+}
+
+#img_search_div {
+	height: 36px;
+	width: 75px;
+	background-color: #cccccc;
+	float: right;
+}
+
+#div_cart {
+	background-color: #f63854;
+	float: right;
+	margin-left: 10px;
+	height: 36px;
+}
+
+#nav {
+	padding-left: 354px;
+	padding-right: 338px;
+}
+
+#nav_ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	height: 40px;
+	background-color: #f63854;
+	list-style: none;
+}
+
+li a {
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	color: #ffffff;
+	display: block;
+}
+
+#cart_a {
+	display: block;
+	text-decoration: none;
+	line-height: 36px;
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 16px;
+	padding-right: 16px;
+	text-decoration: none;
+}
+
+#cart_num {
+	height: 18px;
+	background-color: #ffffff;
+	border: solid 1px #ffffff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10x;
+	border-radius: 10px;
+	padding-left: 14px;
+	color: #f63854;
+	padding-right: 14px;
+}
+
+#li_1 {
+	background-color: #D5233D;
+}
+
+ul li {
+	width: 180px;
+	margin: 0px auto;
+	height: 40px;
+	float: left;
+}
+
+#container {
+	padding-left: 354px;
+	padding-right: 354px;
+}
+
+tr td {
+	width: 240px;
+	height: 37%;
+	padding-top: 20px;
+	padding-bottom: 20px
+}
+
+.item_div {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+table {
+	border: 1px solid #efefef;
+}
+
+table td {
+	border: 1px solid #efefef;
+}
+
+.container_img {
+	background-color: #f63854;
+	width: 200px;
+	height: 200px;
+}
+
+.prd_text_33 {
+	font-size: 12px;
+	color: #333333;
+}
+
+.prd_text_99 {
+	font-size: 12px;
+	color: #999999;
+}
+
+.prd_top_6 {
+	margin-top: 6px;
+}
+
+.prd_top_10 {
+	margin-top: 10px;
+}
+
+
+.bug_right {
+	border: 0px;
+	width: 130px;
+	height: 30px;
+	background-color: #f63854;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+.btn_red {
+	background-color: #f63854;
+}
+
+.btn_red:hover {
+	background-color: #f63854;
+}
+
+.btn_red:active {
+	background-color: #D5233D;
+}
+
+.add_cart {
+	height: 30px;
+	display: block;
+	float: right;
+	background-color: #FDB304;
+	width: 60px;
+	text-align: center;
+}
+
+.div_prd_buy {
+	border: 0px;
+	margin-top: 20px;
+}
+
+.prd_progress {
+	background-color: #cccccc;
+	margin-top: 10px;
+	height: 4px;
+	border: solid 1px #cccccc;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8x;
+	border-radius: 8px;
+}
+
+.prd_real_progress {
+	margin:0px;
+	display:inline-block;
+	height: 4px;
+	width: 30%;
+	background-color: #D5233D;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8x;
+	border-radius: 8px;
+}

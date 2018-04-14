@@ -1,0 +1,734 @@
+body {
+	font-size: 12px;
+}
+a:hover {
+	text-decoration: none;
+}
+.color-red {
+	background: #f63854;
+	border-color: #F63854;
+	color: #fff;
+}
+.blank {
+    clear: both;
+}
+.blank20 {
+	height: 20px;
+	line-height: 20px;
+    clear: both;
+}
+.button-group a.active,.button-group a:hover{
+	background: #d5233d;
+	border-color: #d5233d;
+	color: #fff;
+}
+.button-group a:visited {
+   color: #fff;
+}
+/******************** 共同页面部分start  ************************/
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	margin-bottom: 20px;
+}
+.container .top {
+	width: 100%;
+	background: #f1f1f1;
+	height: 30px;
+}
+.container .top .top-content {
+	width: 1101px;
+	margin: 0 auto;
+	height: 30px;
+	line-height: 30px;
+}
+.container .top .top-content label {
+	font-weight: 100;
+	color: #999;
+	font-size: 12px;
+}
+.container .top .top-content span {
+	float: right;
+}
+.container .top .top-content span font a {
+	color: #999;
+}
+.container .top .top-content span .top-label-login a {
+	color: #f63854;
+	margin: 0 2px;
+}
+.container .top .top-content span .top-label-line {
+	margin: 0 8px;
+}
+.container .top .top-content span font a .glyphicon-menu-down {
+	font-size: 12px;
+	margin-left: 5px;
+}
+.container section.logo {
+	width: 1101px;
+	height: 100px;
+	margin: 0 auto;
+}
+.container section.logo .logo-img {
+	height: 100px;
+	line-height: 100px;
+}
+.container section.logo .logo-img img {
+	max-height: 100%;
+}
+.container section.logo .logo-select {
+	margin-top:30px;
+}
+.container section.logo .logo-select .input-group {
+	width: 350px;
+	float: left;
+	margin-right: 10px;
+}
+.container section.logo .logo-select .input-group input,.container section.logo .logo-select .input-group .input-group-btn button {
+	border-radius: 0;
+	height: 40px;
+}
+.container section.logo .logo-select .input-group .input-group-btn button {
+	padding: 0px 30px;
+}
+.container section.logo .logo-select .button-caution {
+	padding: 0 25px;
+}
+.container section.logo .logo-select .button-caution img {
+	height: 21px;
+	margin-right: 10px;
+}
+.container section.logo .logo-select .button-caution .badge {
+	color: #f63854;
+	background: #fff;
+	padding: 3px 13px;
+	font-size: 15px;
+	margin-left: 5px;
+}
+.container nav.nav {
+	width: 1101px;
+	background:#f63854;
+	height: 40px;
+	margin: 0 auto;
+}
+.container nav.nav .button-group a {
+	width: 150px;
+}
+.container section.body {
+	width: 1101px;
+	min-height: 700px;
+	margin: 0 auto;
+}
+/******************** 共同页面部分end  **************************/
+
+/*********************** 首页start  **************************/
+.container section.body .body-div {
+	width: 220px;
+	height: 350px;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	float: left;
+	padding: 10px;
+	position: relative;
+}
+.container section.body .body-div .body-div-img {
+	height: 185px;
+	text-align: center;
+}
+.container section.body .body-div .body-div-img img {
+	height: 100%;
+}
+.container section.body .body-div p {
+	margin-bottom: 5px;
+}
+.container section.body .body-div .desc {
+	color: #888;
+}
+.container section.body .body-div .progress {
+	height: 10px;
+	margin-bottom: 5px;
+}
+.container section.body .body-div p .button-buy {
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	padding: 0 35px;
+}
+.container section.body .body-div p .button-shopcart {
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	padding: 0 20px;
+}
+.container section.body .body-div .body-div-button {
+	position: absolute;
+    bottom: 10px;
+}
+/************************ 首页end  ***************************/
+
+/*********************** 商品详情start  ***********************/
+.container section.body .nav-line {
+	margin: 10px;
+}
+.container section.product_info .body-info-left {
+	width: 450px;
+}
+.container section.product_info .body-info-left .img img {
+	width: 100%;
+}
+.container section.product_info .body-info-left .album {
+	height: 100px;
+	margin-top: 10px;
+	position: relative;
+}
+.container section.product_info .body-info-left .album .album_left {
+	line-height: 100px;
+	width: 25px;
+	position: absolute;
+	left: 0px;
+	text-align: center;
+}
+.container section.product_info .body-info-left .album .albums {
+	position: absolute;
+	left: 25px;
+	line-height: 100px;
+}
+.container section.product_info .body-info-left .album .albums .album_img {
+	width: 70px;
+	float: left;
+	margin: 0 5px;
+}
+.container section.product_info .body-info-left .album .albums .album_img img {
+	width: 100%;
+}
+.container section.product_info .body-info-left .album .album_right {
+	line-height: 100px;
+	width: 25px;
+	position: absolute;
+	right: 0px;
+	text-align: center;
+}
+.container section.product_info .body-info-left .album_icon {
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.container section.product_info .body-info-left .album_icon .album_icon_div {
+	margin: 0px 5px;
+	float: left;
+}
+.container section.product_info .body-info-left .album_icon .album_icon_div font {
+	margin-left: 5px;
+}
+.container section.product_info .body-info-right {
+	width: 460px;
+	margin-left: 20px;
+}
+.container section.product_info .body-info-right .title {
+	font-weight: bold;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+.container section.product_info .body-info-right .desc {
+	letter-spacing: 2px;
+	color: #888;
+}
+.container section.product_info .body-info-right .name {
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+.container section.product_info .body-info-right .name span {
+	color: #888;
+	font-size: 12px;
+	font-weight: 100;
+	margin-left: 10px;
+}
+.container section.product_info .body-info-right .progress {
+	height: 12px;
+	margin-bottom: 10px;
+}
+.container section.product_info .body-info-right .name-desc .pull-left {
+	width: 150px;
+	color: #888;
+}
+.container section.product_info .body-info-right .name-desc .name-desc-join {
+	text-align: center;
+}
+.container section.product_info .body-info-right .name-desc .name-desc-sy {
+	text-align: right;
+}
+.container section.product_info .body-info-right .name-desc .name-number {
+	font-weight: 600;
+	color: #555;
+	font-size: 20px;
+}
+.container section.product_info .body-info-right .number {
+	position: relative;
+}
+.container section.product_info .body-info-right .number .word{
+	height: 34px;
+    line-height: 34px;
+    float: left;
+    font-weight: 600;
+    color: #888;
+}
+.container section.product_info .body-info-right .number .input-group {
+	float: left;
+	width: 150px;
+	margin: 0 10px;
+}
+.container section.product_info .body-info-right .number .input-group .input-group-addon {
+	border-radius: 0;
+	cursor: pointer;
+}
+.container section.product_info .body-info-right .number .tooltip {
+	opacity: 1;
+	left: 245px;
+	top: 3px;
+}
+.container section.product_info .body-info-right .number .tooltip.right .tooltip-arrow {
+	border-right-color: #feebed;
+}
+.container section.product_info .body-info-right .number .tooltip .tooltip-inner {
+	background-color:#feebed;
+	color: #f63854;
+	padding: 5px;
+}
+.container section.product_info .body-info-right .buttons {
+	margin-top: 20px;
+}
+.container section.product_info .body-info-right .buttons .button {
+	margin-right: 10px;
+	height: 50px;
+}
+.container section.product_info .body-info-right .buttons .button img {
+	margin-right: 10px;
+}
+.container section.product_info .body-info-right .buy-info {
+	background: #F9F9F9;
+	height: 220px;
+	margin-top: 30px;
+	text-align: center;
+}
+.container section.product_info .body-info-right .buy-info .word {
+	line-height: 220px;
+	color: #888;
+	font-size: 16px;
+}
+.container section.product_info .body-desc {
+	background: #f1f1f1;
+	height: 40px;
+}
+.container section.product_info .body-desc .button-group {
+	border-bottom: 2px solid #F63854;
+	width: 1101px;
+}
+.container section.product_info .body-desc .button-group .button {
+	color: #555;
+	background: #F1F1F1;
+}
+.container section.product_info .body-desc .button-group .color-red,.container section.product_info .body-desc .button-group a:hover {
+	background: #F63854;
+	color: #fff;
+}
+.container section.product_info .body-desc .body-desc-content {
+	padding:20px 30px;
+}
+.container section.product_info .body-desc .body-desc-content h4 {
+	font-weight: bold;
+}
+.container section.product_info .body-desc .body-desc-content ul {
+	list-style-type:none;
+	counter-reset:sectioncounter;
+}
+.container section.product_info .body-desc .body-desc-content ul li:before {  
+    content:counter(sectioncounter) "、";   
+    counter-increment:sectioncounter;  
+}  
+.container section.product_info .body-desc .body-desc-content ul li {
+	height: 25px;
+	line-height: 25px;
+}
+.container section.product_info .body-desc .body-desc-content .big_img img {
+	width: 100%
+}
+.container section.product_info .body-desc .body-desc-content .big_img_word {
+	margin: 50px 0;
+	height: 270px;
+}
+.container section.product_info .body-desc .body-desc-content .big_img_word .pull-left{
+	width: 570px;
+    font-size: 18px;
+    padding: 30px;
+}
+/*********************** 商品详情end  *************************/
+
+/*********************** 购物车start  ************************/
+.container section.logo .logo-step {
+	height: 100px;
+	line-height: 100px;
+}
+.container section.shop_cart {
+	min-height: 300px;
+}
+.container section.shop_cart .body-table table tr td {
+	text-align: center;
+}
+.container section.shop_cart .body-table table thead tr td{
+	line-height: 22px;
+}
+.container section.shop_cart .body-table table tbody tr td {
+	height: 100px;
+	line-height: 100px;
+	color: #888;
+}
+.container section.shop_cart .body-table table tr td.pro_info {
+	text-align: left;
+	line-height: 20px;
+	padding-top: 25px;
+}
+.container section.shop_cart .body-table table tr td.pro_info .img {
+	float: left;
+	margin-right: 20px;
+}
+.container section.shop_cart .body-table table tr td.pro_info .title,.container section.shop_cart .body-table table tr td.pro_info font {
+	color: #1699ff;
+}
+.container section.shop_cart .body-table table tr td.pro_info .title {
+	padding-top: 15px;
+}
+.container section.shop_cart .body-table table tr td.pro_info p {
+	margin: 0;
+}
+.container section.shop_cart .body-table table tr td.number {
+	padding-top: 40px;
+}
+.container section.shop_cart .body-table table tr td.sum {
+	color: #F63854;
+	font-size: 16px;
+} 
+.container section.shop_cart .body-table table tr td.del a {
+	color: #555;
+} 
+.container section.shop_cart .body-table table.table-sum {
+	border: 1px solid #ddd;
+}
+.container section.shop_cart .body-table table.table-sum tr td {
+	height: 20px;
+	line-height: 24px;
+}
+.container section.shop_cart .body-table table.table-sum tr td.all_sum {
+	text-align: right;
+	font-size: 20px;
+}
+.container section.shop_cart .body-table table.table-sum tr td.all_sum .all_sum_money {
+	color: #F63854;
+	font-weight: 600;
+	margin-right: 10px;
+}
+.container section.shop_cart .body-table .buttons .to_index .button {
+	background: #ccc;
+	color: #fff;
+}
+.container section.shop_cart .body-table .buttons .to_index span {
+	margin-left: 15px;
+}
+.container section.shop_cart .body-table .buttons .confirm {
+	text-align: right;
+}
+.container section.shop_cart .body-table .buttons .confirm p {
+	font-size: 14px;
+	margin-top: 5px;
+	color: #888;
+}
+.container section.footer {
+	background: #F1F1F1;
+	width: 100%;
+	height: 250px;
+}
+.container section.footer .footer-main {
+	width: 600px;
+	margin: 0 auto;
+	height: 250px;
+	padding: 20px 0;
+}
+.container section.footer .footer-main .pull-left {
+	height: 150px;
+}
+.container section.footer .footer-main .footer-main-left {
+	border-right: 1px solid #ccc;
+	width: 200px;
+	padding: 0 20px;
+}
+.container section.footer .footer-main .footer-main-left h4{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.container section.footer .footer-main .footer-main-left p {
+	margin-bottom: 5px;
+}
+.container section.footer .footer-main .footer-main-left p a {
+	color: #888;
+}
+.container section.footer .footer-main .footer-main-right {
+	width: 200px;
+	padding: 10px 0 0 30px;
+}
+.container section.footer .footer-main .footer-main-right p img {
+	width: 35px;
+	margin-right: 10px;
+}
+.container section.footer .footer-main .footer-main-code {
+	margin-left: 10px;
+	width: 150px;
+	text-align: center;
+}
+.container section.footer .footer-main .footer-main-code img {
+	height: 80%;
+	margin-bottom: 5px;
+}
+.container section.footer .footer-main .footer-main-code p {
+	color: #888;
+}
+.container section.footer .footer-main .copyright {
+	color: #888;
+	font-size: 13px;
+}
+.container section.footer .footer-main .copyright img {
+	margin-right: 30px;
+}
+/*********************** 购物车end  **************************/
+
+/*********************** 个人中心start  **********************/
+.container section.user_info {
+	min-height: 500px;
+}
+.container section.user_info .user_info_left {
+	width: 240px;
+	height: 296px;
+	background: #F1F1F1;
+	padding: 20px;
+}
+.container section.user_info .user_info_left ul .list-group-item {
+	background: none;
+	border: none;
+	text-align: center;
+}
+.container section.user_info .user_info_left ul .list-group-item a {
+	color: #333;
+	font-size: 16px;
+	padding: 10px 50px;
+}
+.container section.user_info .user_info_left ul .list-group-item a:hover {
+	color: #F63854;
+}
+.container section.user_info .user_info_left ul .list-group-item a.active {
+	color: #F63854;
+}
+.container section.user_info .user_info_right {
+	width: 845px;
+	height: 406px;
+	background: #F1F1F1;
+	padding: 26px;
+}
+.container section.user_info .user_info_right .user_info_right_main {
+	width: 300px;
+	margin: 0 auto;
+	height: 350px;
+}
+.container section.user_info .user_info_right .user_info_right_main .table tr td {
+	font-size: 14px;
+	border: none;
+}
+.container section.user_info .user_info_right .user_info_right_main .table tr td:first-child {
+	width: 85px;
+	text-align: right;
+}
+.container section.user_info .user_info_right .user_info_right_main .table .user_header_img td:first-child {
+	line-height: 168px;
+}
+.container section.user_info .user_info_right .user_info_right_main .table .user_nickname td:nth-child(2) a {
+	margin-left: 20px;
+	color: #169aFF;
+}
+.container section.user_info .user_info_right .user_info_right_main .table .user_nickname td:nth-child(2) a img {
+	margin-right: 6px;	
+}
+.container section.user_info .user_info_right .user_info_right_main .table .user_phone td:nth-child(2) a {
+	color: #169aFF;
+	font-size: 12px;
+}
+.container section.user_info .user_info_right .user_info_right_main .table .user_phone td:nth-child(2) a img {
+	margin-right: 6px;	
+}
+/*********************** 个人中心end  ************************/
+
+/*********************** 重置密码start  **********************/
+.container section.reset_password {
+	min-height: 500px;
+}
+.container section.reset_password .main {
+	width: 700px;
+	height: 450px;
+	border: 1px solid #ccc;
+	margin:20px auto ;
+	position: relative;
+}
+.container section.reset_password .main .title {
+	height: 70px;
+	width: 700px;
+	border-bottom: 1px solid #ccc;
+	color: #333;
+	font-size: 18px;
+	line-height: 70px;
+	padding-left: 40px;
+} 
+.container section.reset_password .main .body .img {
+	text-align: center;
+	margin-top: 50px;
+}
+.container section.reset_password .main .body .img img {
+	width: 90%;
+	padding: 0 20px;
+}
+.container section.reset_password .main .body .form {
+	width: 350px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.container section.reset_password .main .body .form .form-control {
+	height: 40px;
+	border-radius: 0;
+}
+.container section.reset_password .main .body .form .code .form-control {
+	width: 250px;
+}
+.container section.reset_password .main .body .form .code img {
+	float: right;
+    width: 90px;
+    height: 40px;
+}
+.container section.reset_password .main .body .form .button {
+	margin-top: 30px;
+	width: 350px;
+}
+.container section.reset_password .main .reset_password_2 {
+	opacity: 0;
+	position: absolute;
+    left: 0px;
+    top: 70px;
+    display: none;
+}
+.container section.reset_password .main .reset_password_2 .form .form-group p {
+	color: #333;
+	font-size: 14px;
+} 
+.container section.reset_password .main .reset_password_2 .form .code .button {
+	width: 90px;
+    padding: 0;
+    float: right;
+    margin: 0;
+    border-width: 1px;
+}
+.container section.reset_password .main .reset_password_3 {
+	opacity: 0;
+	position: absolute;
+    left: 0px;
+    top: 70px;
+    display: none;
+}
+.container section.reset_password .main .reset_password_3 .form {
+	margin-top: 33px;
+}
+.container section.reset_password .main .reset_password_3 .form p {
+	color: #333;
+}
+.container section.reset_password .main .reset_password_3 .form .button {
+	margin-top: 20px;
+}
+.container section.reset_password .main .reset_password_4 {
+	position: absolute;
+    left: 0px;
+    top: 70px;
+    opacity: 0;
+    display: none;
+}
+.container section.reset_password .main .reset_password_4 .imgs {
+	width: 100px;
+	margin: 20px auto;
+}
+.container section.reset_password .main .reset_password_4 .imgs img {
+	width: 100%;
+}
+.container section.reset_password .main .reset_password_4 .word {
+	text-align: center;
+	color: #333;
+	font-size: 18px;
+}
+.container section.reset_password .main .reset_password_4 .buttons {
+	text-align: center;
+	margin-top: 20px;
+}
+.container section.reset_password .main .reset_password_4 .buttons .button {
+	width: 350px;
+}
+/*********************** 重置密码end  ************************/
+
+/*********************** 等待揭晓start  **********************/
+.container section.wait_announce {
+	border: 1px solid #ccc;
+	min-height: 500px;
+	margin-bottom: 20px;
+	padding-top: 100px;
+}
+.container section.wait_announce .body_top_div {
+	margin: 0 auto;
+	width: 1000px;
+	height: 200px;
+}
+.container section.wait_announce .body_top_div p {
+	margin-bottom: 20px;
+}
+.container section.wait_announce .body_top_div p a {
+	color: #1699ff;
+}
+.container section.wait_announce .body_top_div .p1 {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	font-family: "黑体";
+}
+.container section.wait_announce .body_top_div .p1 a {
+	font-size: 14px;
+	font-weight: 100;
+	margin-left: 10px;
+}
+.container section.wait_announce .body_top_div .p2 {
+	text-align: center;
+	font-size: 16px;
+	color: #999;
+}
+.container section.wait_announce .body_top_div .p2 button {
+	margin-left: 10px;
+}
+.container section.wait_announce .body_top_div .p3 {
+	text-align: center;
+	font-size: 16px;
+	color: #999;
+}
+.container section.wait_announce .table {
+	width: 1000px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	margin-top: 50px;
+}
+.container section.wait_announce .table thead {
+	background: #f5f5f5;
+}
+.container section.wait_announce .table tbody .pro_name{
+	color: #1699ff;
+
+/*********************** 等待揭晓end  ************************/
+}

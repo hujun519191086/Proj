@@ -1,0 +1,5 @@
+创建数据库:
+goods=jdbc:mysql://localhost:3306/goods
+number=jdbc:mysql://localhost:3306/number
+spservice=jdbc:mysql://localhost:3306/spservice
+buy_history=jdbc:mysql://localhost:3306/buy_history

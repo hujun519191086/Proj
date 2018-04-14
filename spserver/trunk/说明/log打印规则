@@ -1,0 +1,10 @@
+普通日志打印
+Logger logger = LoggerFactory.getLogger(getClass());
+logger.debug("load logger success!");
+		
+
+带参数日志打印
+logger.debug("Processing trade with id: {} and symbol : {} ", id, symbol);
+
+队列打印:
+适配器Log4jLoggerAdapter

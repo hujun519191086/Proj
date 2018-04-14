@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>海淘云购</title>
+		<link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		 <link rel = "icon" href = "haitao.ico" type = "image/x_icon">
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap3.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="js/shoppingCart.js" ></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1628611ea2b6b1401ad53196350836d5"></script>
+		<script>
+			function initIndex(){
+				var pid = loginInfo.pid;
+				if(pid == undefined){
+					pid=0;
+				}
+				var page = 0;
+				var loc = "";
+				var order = 1;
+				get_products(pid,page,loc,order);
+				index_onload();
+				drawMenu_index();
+				loadADs();
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top"></div>
+			<div class="hx"></div>
+			<div class="logo-nav"></div>
+			<div id="banner_list"></div>
+			<div class="nav_2">
+			    <ul>
+			        <li>
+			           <ul id="lb"></ul>
+			        </li>
+			        <div id="banner">
+						<ul></ul>
+					</div>
+					<li class="d3">
+			            <img alt="图片" src="img/xptj.jpg">
+			            <div class="body-div-img jz">
+							<a href="#">
+							   <img src="img/product.png" />
+							</a>
+						</div>
+						<p class="title">goods_name</p>
+						<p class="desc">总需:totalCount人次 </p>
+						<div class="progress">
+						   <div class="progress-bar color-red" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:">
+						   </div>
+						</div>
+						<p><span class="pull-left">tobuy</span><span class="pull-right">needCount</span></p>
+						<div class="blank"></div>
+						<p><span class="pull-left">已参加人次</span><span class="pull-right">剩余人次</span></p>				
+			            <div class="zx"><span class="ljgm">立即购买</span></div>
+			        </li>
+			        <div style="clear:both;"></div>
+			    </ul>
+			</div>
+			<section class="body" id="index_body">
+			  <div id="body_1"></div>
+			  <div style="clear:both;"></div>
+			  <div id="body_2">
+			      <div class="body_2_1">
+			          <span></span>最新揭晓
+			      </div>
+			      <div id="body_2_2"></div>
+			  </div>
+			  <div style="clear:both;"></div>
+			  <div id="body_3">
+			      <div class="body_3_1">
+			          <img src="img/1f.png" />手机数码
+			      </div>
+			      <div id="body_3_2"></div>
+			  </div>
+			  <div style="clear:both;"></div>
+			  <div id="body_4">
+			      <div class="body_4_1">
+			          <img src="img/2f.png" />奢侈品区
+			      </div>
+			      <div id="body_4_2"></div>
+			  </div>
+			  <div style="clear:both;"></div>
+			  <div id="body_5">
+			      <div class="body_5_1">
+			          <img src="img/3f.png" />其它商品
+			      </div>
+			      <div id="body_5_2"></div>
+			  </div>
+			  <div style="clear:both;"></div>
+			</section>
+			<div style="clear:both;"></div>
+			<section class="footer"></section>
+		</div>
+	<div class="nav-right"></div>
+
+
+</body>
+	<script type="text/javascript" src="js/style.js" ></script>
+	<script type="text/javascript" src="js/register.js" ></script>
+	<script>
+		function loadADs(){
+			$.ajax({
+				type:"POST",
+				url:getRealPath()+"/servlet/LoadADs",
+				async:false,
+				success:function(res){
+					var obj = JSON.parse(res);
+					var length = obj.ad_list.length;
+					var ul_inner = "";
+					var banner_list = "";
+					for(var i=0;i<length;i++){
+						ul_inner += "<li>"+(i+1)+"</li>";
+						banner_list += "<a href='"+obj.ad_list[i].link+"' target='_blank' style='width:100%;height:100%;background:url(\""+obj.ad_list[i].img+"\") no-repeat center'></a>"; 
+						
+					}
+					$("#banner ul").html(ul_inner);
+					$("#banner_list").html(banner_list);
+				},
+				error:function(res){
+				}
+			});
+		}
+</script>
+	<script>
+		initIndex();
+	</script>
+	
+	
+</html>
+
+
+<script>
+	var t = n = 0, count;
+	$(document)
+			.ready(
+					function() {
+						count = $("#banner_list a").length;
+						$("#banner_list a:not(:first-child)").hide();
+						$("#banner_info").html(
+								$("#banner_list a:first-child").find("img")
+										.attr('alt'));
+						$("#banner_info").click(
+								function() {
+									window.open($("#banner_list a:first-child")
+											.attr('href'), "_blank")
+								});
+						$("#banner li")
+								.click(
+										function() {
+											var i = $(this).text() - 1;
+											n = i;
+											if (i >= count)
+												return;
+											$("#banner_info").html(
+													$("#banner_list a").eq(i)
+															.find("img").attr(
+																	'alt'));
+											$("#banner_info")
+													.unbind()
+													.click(
+															function() {
+																window
+																		.open(
+																				$(
+																						"#banner_list a")
+																						.eq(
+																								i)
+																						.attr(
+																								'href'),
+																				"_blank")
+															});
+											$("#banner_list a").filter(
+													":visible").fadeOut(500)
+													.parent().children().eq(i)
+													.fadeIn(1000);
+											document.getElementById("banner").style.background = "";
+											$(this).toggleClass("on");
+											$(this).siblings().removeAttr(
+													"class");
+										});
+						t = setInterval("showAuto()", 5000);
+						$("#banner").hover(function() {
+							clearInterval(t)
+						}, function() {
+							t = setInterval("showAuto()", 5000);
+						});
+					});
+
+	function showAuto() {
+		n = n >= (count - 1) ? 0 : ++n;
+		$("#banner li").eq(n).trigger('click');
+	}
+</script>
+
+
+
+
+

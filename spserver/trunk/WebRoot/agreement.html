@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+
+<title>鐧诲綍鐣岄潰</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+
+</head>
+
+<body>
+	<script src="<%=basePath%>jquery/jquery-1.12.4.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="<%=basePath%>jquery/jquery-1.12.4.js"></script>
+	<script>
+	
+	</script>
+
+	<a name="sendMailClick" href="<%=basePath%>/servlet/LoginInfoServlet">鍙戦�閭欢</a>
+
+
+
+
+	<div class="title verification">
+		<h1>楠岃瘉閭</h1>
+		<h2>璇疯緭鍏ヤ綘鏀跺埌閭楠岃瘉鐮�/h2>
+	</div>
+	<div>
+		<form id="registForm">
+			<div>
+				<input type="text" id="emailName" >
+			</div>
+			<div>
+				<input type="text" id="nickName">
+			</div>
+			<div>
+				<input type="text" id="password">
+			</div>
+			<div>
+				<input type="text" name="verification_code">
+				<button type="button" onclick="sendEMailCode()"  id="onSendSuccess">鍙戦�閭欢楠岃瘉鐮�/button>
+			</div>
+			<div>
+				<button class="submit blue-button">鍘荤櫥闄�/button>
+				<button class="submit blue-button">杩涘叆娴疯喘</button>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

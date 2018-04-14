@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADs>
+	<AD ADId="100000" ADName="ad1" img="img/banner.jpg" link="/SPserver/details.html?gid=778497452566810624"></AD>
+	<AD ADId="200000" ADName="ad2" img="img/banner.jpg" link="/SPserver/details.html?gid=778493548391206912"></AD>
+</ADs>

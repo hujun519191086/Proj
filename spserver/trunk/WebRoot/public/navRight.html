@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>navRight.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <ul class="bodyright box-sizing" style="display: none;">
+		<li
+			onclick="location.href='/SPserver/ShopCart.html'">
+			<em class="cartNum">0</em>
+			<p>购物车</p>
+		</li>
+		<li class="br-2"
+			onclick="window.open('http://wpa.qq.com/msgrd?v=3&amp;uin=1162195541&amp;site=qq&amp;menu=yes');">
+			<em></em>
+			<p>在线客服</p>
+		</li>
+		<!--
+		<li class="br-4"><em></em>
+			<p>
+				 <img src="img/code.png"> <span>扫描下载APP</span>
+			</p></li>
+		-->
+		<li class="br-6 "><em></em> 
+				<p>返回顶部</p></li>
+	</ul>
+  </body>
+  <script>
+   $(function(){
+      $('.br-6').click(function() {
+      $('body,html').animate({scrollTop:0},300);
+    });
+   });
+
+</script>
+<script>
+function LoadShoppingCartNum(pid){
+	$.ajax({
+		type:"POST",
+		url:"./servlet/LoadShoppingCart",
+		async:false,
+		data:{"pid":pid},
+		success:function(res){
+			var obj = JSON.parse(res);
+			var length = obj.cartList.length;
+			$(".cartNum").html(length);
+		}
+	});
+}
+</script>
+<script>
+var pid=loginInfo.pid;
+LoadShoppingCartNum(pid);
+</script>
+<script>
+$(function(){
+    var navH2_len = $(".menu-show").length;
+    var navH = $(window).height()/2;
+    var navH2 = navH2_len > 0 ? $(".menu-show").offset().top : '';  
+    $(window).scroll(function(){     
+        var scroH = $(this).scrollTop();      
+        if(scroH>=400){
+            $(".bodyright").fadeIn(500);
+        }else if(scroH<400){
+            $(".bodyright").fadeOut(500);
+        }
+        if(navH2_len > 0 && scroH>navH2){
+            $(".header").addClass("head_fx");
+            $(".header").find(".screen-left").removeClass("head-fx1");
+        }else{
+            $(".header").removeClass("head_fx");
+            $(".header").find(".screen-left").addClass("head-fx1");
+        }
+    });
+});
+$(function(){
+    var navH1_len = $(".index-menu-show").length;   
+    var navH1 = navH1_len > 0 ? $(".index-menu-show").offset().top-30 : '';    
+    $(window).scroll(function(){        
+        var scroH = $(this).scrollTop();        
+       if(navH1_len > 0 && scroH>navH1){
+            $(".index-menu").fadeIn(500);
+        }else{
+            $(".index-menu").fadeOut(500);
+        }
+    });
+});
+
+$('.bodyright li.br-6').click(function () {
+    $('html,body').animate({
+        scrollTop : '0px'
+    }, 500);
+});
+$('.bottom-close').click(function () {
+    $(".bottom-ad").fadeOut(300)
+});
+$('.nav-title').hover(function(){
+    $(this).find(".screen-left").show()
+},function(){
+    $(this).find(".screen-left").hide()
+});
+</script>
+</html>

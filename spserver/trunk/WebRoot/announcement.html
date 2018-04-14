@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>详情页</title>
+		<link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/bootstrap3.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="js/shoppingCart.js" ></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1628611ea2b6b1401ad53196350836d5"></script>
+	    <script type="text/javascript">
+		  $(document).ready(function(){
+			  var showproduct = {
+				  "boxid":"showbox",
+				  "sumid":"showsum",
+				  "boxw":450,//宽度,该版本中请把宽高填写成一样
+				  "boxh":450,//高度,该版本中请把宽高填写成一样
+				  "sumw":60,//列表每个宽度,该版本中请把宽高填写成一样
+				  "sumh":60,//列表每个高度,该版本中请把宽高填写成一样
+				  "sumi":15,//列表间隔
+				  "sums":5,//列表显示个数
+				  "sumsel":"sel",
+				  "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
+				  "lastid":"showlast",
+				  "nextid":"shownext"
+				  };//参数定义	  
+			 $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+		  });
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top"></div>
+			<div class="hx"></div>
+			<div class="logo-nav"></div>
+			<div class="xq_1">
+			     <div class="xq_1_1">
+			                           首页><span class="huoq"></span>><span class="jies"></span>
+			     </div>
+			     <div class="xq_1_2">
+			         <div class="qx_1_2_z">
+			               <div id="showbox">
+							  
+						   </div><!--展示图片盒子-->
+						   <div id="showsum"></div><!--展示图片里边-->
+						   <p class="showpage">
+							  <a href="javascript:void(0);" id="showlast"> < </a>
+							  <a href="javascript:void(0);" id="shownext"> > </a>
+						   </p>
+						   <ul class="zpbz">
+						      <li><img src="img/icon_1.png"/>公正公开</li>
+						      <li><img src="img/icon_4.png"/>正品保证</li>
+						      <li><img src="img/icon_3.png"/>100%正品保证</li>
+						      <li><img src="img/icon_2.png"/>免费配送</li>
+						   </ul>
+			         </div>
+			         <div class="qx_1_2_y">
+			               <div class="spjs"></div>
+			               <div class="spjs_2"></div>
+							<div class="djs">
+							   <div class="djs_z"><img src="img/djs.png"/></div>
+							   <div class="djs_y">
+							       <span class="djs_y_s">期号:<span class="qh"></span>&nbsp;&nbsp;|&nbsp;&nbsp;揭晓倒计时</span><br>
+							       <span class="djs_y_x">
+						       		<span class="minute_1">1</span><span class="minute_2">1</span>:<span class="second_1">1</span><span class="second_2">1</span>:<span class="millisec_1">1</span><span class="millisec_2">1</span>
+							       </span>
+							   </div>
+							</div>
+							<div class="djs_2" style="display:none">
+							   
+							</div>
+							<div class="jsff">
+							    <ul>
+							       <li></li>
+							       <li class="li_1"></li>
+							    </ul>
+							</div>
+							<p style="padding:5px 0px 15px">
+							     <a class="qdl" >请登录</a>查看你的夺宝号码
+							</p>
+							<div style="font-size:18px;">
+							    <p><span style="font-weight:bold;">【最新一期】</span>正在火热进行中…</p>
+							    <div class="progress" style="border-radius: 10px;">
+							   </div>
+							   <div style="float:left;color:#fdb51b;font-size:16px;width: 100%;">
+							                   已完成<span class="jdt"></span>%,剩余<span class="syrc">666</span>
+							     <span class="ljqw"></span>
+							   </div>
+							</div>
+			         </div>
+			         <div style="clear:both;"></div>
+			         <div class="xq_1_3">
+					     <div class="xq_1_3_1">
+					          <span class="xq_sp djzh">商品详情</span><span class="db_jl" onclick="time_1(gid,period)">夺宝参与记录</span>
+					     </div>
+					     <div class="spxqjs">
+							 <div class="xq_1_3_5">
+								   
+							 </div>
+					     </div>
+					     <div class="spdbjl" style="display:none;">
+					          <div class="spdbjl_1">
+					               <div class="spdbjl_1_1">
+					                   
+					               </div>
+					               <ul id="jtsj">
+					                 
+					               </ul>
+					          </div>
+					     </div>
+					</div>
+			     </div>
+			</div>
+			
+		</div>
+		<div class="nav-right"></div>
+	</body>
+	<script type="text/javascript" src="js/style.js" ></script>
+	<script type="text/javascript" src="js/register.js" ></script>
+	<script>
+		
+	</script>
+	
+</html>
+<script>
+   
+   //这是物品增减
+   $(function(){
+      $(".jia").click(function(){
+         var jia=$(".tx").val()*1;
+          if(jia<1||isNaN(jia)){
+            jia=1;
+         }else{
+            jia+=1;
+         }
+          $(".tx").val(jia);
+      });
+      $(".jian").click(function(){
+         var jian=$(".tx").val()*1;
+         if(jian<=1||isNaN(jian)){
+            jian=1;
+         }else{
+            jian-=1;
+         }
+         $(".tx").val(jian);
+      });
+   })
+   
+</script>
+<script>
+	function loadInfo(pid,gid){
+		$.ajax({
+		type:"POST",
+		url:getRealPath()+"/servlet/LoadRecentPublish",
+		async:false,
+		data:{"pid":pid,"gid":gid},
+		success:function(res){
+			var obj = JSON.parse(res);
+			console.log(obj.pub_his_list);
+			var goods_name = obj.pub_his_list[0].goods_name;
+			var onecCount=obj.pub_his_list[0].onecCount;
+			var progress = obj.pub_his_list[0].progress;
+			
+			if(onecCount=1){
+			   onecCount="一元夺宝";
+			}else if (onecCount=10){
+			   onecCount="十元夺宝";
+			}else{
+			   onecCount="百元夺宝";
+			};
+			
+			var totalCount= obj.pub_his_list[0].totalCount;
+			var followCount= obj.pub_his_list[0].followCount;
+			var catelog= obj.pub_his_list[0].catelog;
+			$(".spjs").html(goods_name);//商品介绍
+			$(".jies").html(goods_name);
+			$(".qh").html(period);//期号
+			$(".huoq").html(catelog);//获取分类
+			$(".gm").click(function(){mainBuy(""+gid,""+pid);});
+			$(".jrqd").click(function(){mainShopcart(""+gid,""+pid);});
+			
+			
+			$(".tx").blur(function(){
+		         var val=$(".tx").val()*1;
+		          if(isNaN(val)||val>needCount||1>val){
+		             val=needCount;
+		          }
+		          $(".tx").val(val);
+		      });
+		      
+		    $(".jia").click(function(){
+		         var jia=$(".tx").val()*1;
+		          if(jia<1||needCount<=jia){
+		            jia=needCount-1;
+		         }
+		          $(".tx").val(jia);
+		      });
+			
+			//图片
+			var goods_img = obj.pub_his_list[0].goods_img;
+			var dis_imgs = obj.pub_his_list[0].dis_imgs;
+			var arr_dis_imgs = JSON.parse(dis_imgs);
+			var xqtp="";
+			for(var j=0;j<arr_dis_imgs.length;j++){
+			   xqtp += '<img src="'+goods_img+'/'+arr_dis_imgs[j]+'" width="450" height="450"/>';
+			}
+			$("#showbox").html(xqtp);
+			
+			
+			//详情图片
+			var detail_imgs = obj.pub_his_list[0].detail_imgs;
+			var arr_detail_imgs = JSON.parse(detail_imgs);
+			var xqtp_1="";
+			for(var j=0;j<arr_detail_imgs.length;j++){
+			   xqtp_1 += '<img src="'+goods_img+'/'+arr_detail_imgs[j]+'"/>';
+			}
+			//设置倒计时
+			var cur_time = obj.pub_his_list[0].cur_time;
+			var pub_time = obj.pub_his_list[0].pub_time;
+			var time_diff = cur_time-new Date().getTime();//服务器与客户端时间差
+			var time_end = pub_time - time_diff;
+			var target = document.getElementsByClassName("qx_1_2_y")[0];
+			count_down_ann(time_end,target,gid,period);
+			
+			$(".xq_1_3_5").html(xqtp_1);
+		},
+		error:function(res){
+			alert("获取数据出错,请稍后再进入");
+		}
+	});
+	}
+	function getQueryString(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); return null; 
+} 
+</script>
+<script>
+	function count_down_ann(time_end,target,gid,period) {
+	var int_minute, int_second, int_millisec;//取整
+	var time_delay = 1000;//1000毫秒延迟
+	var time_distance = time_end - new Date().getTime()+time_delay;
+	
+	if (time_distance >= 0) {
+		//相减的时间换成分钟
+		int_minute = Math.floor(time_distance / 60000);
+		time_distance -= int_minute * 60000;
+
+		//相减的时间换成分钟
+
+		int_second = Math.floor(time_distance / 1000);
+
+		time_distance -= int_second * 1000;
+
+		// 相减的差数换算成秒数 
+
+		int_millisec = Math.floor(time_distance / 10);
+		
+		
+		// 显示倒计时效果      
+	    
+		var time_minute1 = target.getElementsByClassName("minute_1")[0];
+		var time_minute2 = target.getElementsByClassName("minute_2")[0];
+		var time_second1 = target.getElementsByClassName("second_1")[0];
+		var time_second2 = target.getElementsByClassName("second_2")[0];
+		var time_millisec1 = target.getElementsByClassName("millisec_1")[0];
+		var time_millisec2 = target.getElementsByClassName("millisec_2")[0];
+		
+		time_minute1.innerHTML = parseInt(int_minute / 10);
+		time_minute2.innerHTML = int_minute % 10;
+		time_second1.innerHTML = parseInt(int_second / 10);
+		time_second2.innerHTML = int_second % 10;
+		time_millisec1.innerHTML = parseInt(int_millisec / 10);
+		time_millisec2.innerHTML = int_millisec % 10;
+		
+		setTimeout(function(){count_down_ann(time_end, target ,gid ,period);}, 100);
+	}else{
+		$.ajax({
+			type:"POST",
+			url:getRealPath()+"/servlet/LoadPubHistory",
+			async:false,
+			data:{"gid":gid,"period":period},
+			success:function(res){
+				var obj = JSON.parse(res);
+				var djs='';
+				
+				var pub_his  = obj.pub_his_list[0];
+				var nickname = pub_his.nickname;
+				var lucky_code = pub_his.lucky_code;
+				var buyCount = pub_his.buyCount;
+				var pub_time = pub_his.pub_time;
+				var lucky_pid = pub_his.pid //幸运者id
+				var format = "yyyy-MM-dd hh:mm:ss";
+				//	zxjx += '<p>恭喜<span class="yhm">'+nickname+'</span><span class="dz"></span>获得该商品</p>';
+				//zxjx += '<p>幸运号码:<span class="renc">'+lucky_code+'</span></p>';
+				//zxjx += '<p>本期参与:<span class="renc">'+buyCount+'</span>人次</p>';
+				//zxjx += '<p>揭晓时间:'+formatDate(new Date(parseInt(pub_time)), format)+'</p>';
+				djs += '<div class="djs_2_1"><span class="xyqh">期号'+period+'|幸运号码</span><span class="haoma">'+lucky_code+'</span></div>';
+				djs += '<ul class="kaij">';
+				djs += '<li class="kaij_z">';
+				djs += '<ul>';
+				djs += '<li>用户昵称:<span>'+nickname+'</span></li>';
+				djs += '<li>用户ID:<span>'+lucky_pid+'</span></li>';
+				djs += '<li><a>查看TA的号码>></a></li>';
+				djs += '</ul>';
+				djs += '</li>';
+				djs += '<li class="kaij_y">';
+				djs += '<ul>';
+				djs += '<li>揭晓时间:<span>'+formatDate(new Date(parseInt(pub_time)), format)+'</span></li>';
+				djs += '<li>本期参与:<span>'+buyCount+'</span></li>';
+				djs += '</ul>';
+				djs += '</li>';
+				djs += '</ul>';
+				
+				target.getElementsByClassName("djs")[0].style.display = "none";
+				target.getElementsByClassName("djs_2")[0].style.display = "";
+				target.getElementsByClassName("djs_2")[0].innerHTML =djs;
+			},
+			error:function(res){
+				alert("揭晓数据出错,请刷新页面");
+			}
+		});
+	}
+}
+</script>
+<script>
+	function loadInfo_1(pid,gid){
+		$.ajax({
+		type:"POST",
+		url:getRealPath()+"/servlet/LoadGoods",
+		async:false,
+		data:{"pid":pid,"gid":gid},
+		success:function(res){
+			var obj = JSON.parse(res);
+			console.log(obj.goods_list);
+			var goods_name = obj.goods_list[0].goods_name;
+			var period=obj.goods_list[0].period;
+			var progress = obj.goods_list[0].progress;
+			var jdt="";
+			jdt += '<div class="progress-bar color-y" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: '+progress+'%"></div>';
+			var needCount= obj.goods_list[0].needCount;
+			var html="";
+		    html += '<a href="details.html?gid='+gid+'">立即前往';
+			html += '</a>';
+			$(".progress").html(jdt);//进度条
+			$(".jdt").html(progress);//进度条数字
+			$(".syrc").html(needCount);//剩余人次
+			$(".ljqw").html(html);
+		},
+		error:function(res){
+			alert("获取数据出错,请稍后再进入");
+		}
+	});
+	}
+	function getQueryString(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); return null; 
+} 
+</script>
+<script>
+//购买记录
+	function time_1(gid,period){
+		$.ajax({
+		type:"POST",
+		url:getRealPath()+"/servlet/LoadGoodsBuyHistory",
+		async:false,
+		data:{"gid":gid,"period":period},
+		success:function(res){
+			var obj = JSON.parse(res);
+            var length = obj.goods_buy_his_list.length;
+			var sjz="";
+			for(var i=0;i<length;i++){
+			    var buy_Time = obj.goods_buy_his_list[i].buy_Time;  //购买时间
+				var nickname=obj.goods_buy_his_list[i].nickname;  //昵称
+				var buyCount=obj.goods_buy_his_list[i].buyCount;   //参与人次
+				var format = "yyyy-MM-dd hh:mm:ss";
+				sjz += '<li>';
+	            sjz += '<span class="sj_1">'+formatDate(new Date(parseInt(buy_Time)), format)+'</span>';
+	            sjz += '<img src="img/sj_2.png"/>';
+	            sjz += '<a class="ch">'+nickname+'</a>，参与了<span class="cs">'+buyCount+'人次</span>';
+	            sjz += '</li>';
+            };
+			$("#jtsj").html(sjz);//时间轴
+		},
+		error:function(res){
+			alert("获取数据出错,请稍后再进入");
+		}
+	});
+	}
+	function getQueryString(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); return null; 
+} 
+</script>
+<script>
+	var gid = getQueryString("gid");
+	var period = getQueryString("period");
+	var pid = loginInfo.pid;
+	if(pid == undefined){
+		pid=0;
+	}
+	loadInfo(pid,gid);//最新揭晓
+	loadInfo_1(pid,gid);//默认商品
+</script>
+<script>
+   //夺宝记录和商品详情的切换
+   $(function(){
+       $(".xq_sp").click(function(){
+          $(".spdbjl").css("display","none")
+          $(".spxqjs").css("display","block")
+       });
+       $(".db_jl").click(function(){
+          $(".spxqjs").css("display","none")
+          $(".spdbjl").css("display","block")
+       });
+   });
+</script>
+<script>
+       $(".xq_1_3_1 span").click(function(){
+            $(".xq_1_3_1 span").each(function(){
+                $(".xq_1_3_1 span").removeClass("djzh");
+            })
+            $(this).addClass("djzh");
+        });
+</script>
+<script>
+function LoadShoppingCart_1(pid){
+	$.ajax({
+		type:"POST",
+		url:getRealPath()+"/servlet/LoadShoppingCart",
+		async:false,
+		data:{"pid":pid},
+		success:function(res){
+			var obj = JSON.parse(res);
+			var length = obj.cartList.length;
+			$(".badge").html(length);
+		}
+	});
+}
+</script>
+
+<script>
+LoadShoppingCart_1(pid);
+</script>
+
+
+
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>产品中心</title>
+		<link rel="stylesheet" href="../css/bootstrap3.css" />
+		<link rel="stylesheet" href="../css/button.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-2.0.3.min.js" ></script>
+		<script type="text/javascript" src="../js/jquery.pagination.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="../js/kkpager.min.js"></script>
+		<script type="text/javascript" src="../js/shoppingCart.js" ></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1628611ea2b6b1401ad53196350836d5"></script>
+	   
+	</head>
+	<body>
+		<div class="container">
+			<div class="top"></div>
+			<div class="hx"></div>
+			<div class="logo-nav">
+			</div>
+			<div class="cont_2">
+			     <div class="zuob">
+			         <p>我的夺宝</p>
+			         <ul>
+			            <li><a href="../personal.html">夺宝记录</a></li>
+			            <li><a href="../personal_1.html">个人资料</a></li>
+			            <li><a href="../personal_2.html">账户安全</a></li>
+			         </ul>
+			     </div>
+			     <div class="youb">
+			        <div class="youb_2">
+			         <p>当前位置:我的夺宝><span style="color:#db3652;">安全中心</span></p>
+			         <div class="grzl">
+			            <!--  <ul>
+			                 <li class="grzl_z" style="height: 140px;line-height: 140px;">头像</li>
+			                 <li class="grzl_y"><img src="img/grtx.png" class="txtp"></li>
+			              </ul>   -->
+			              <ul>
+			                 <li class="grzl_z">原始密码</li>
+			                 <li class="grzl_y"><input type="password" placeholder="请输入原始密码"/ class="oldPassword"></li>
+			              </ul>
+			             <!--<ul>
+			                 <li class="grzl_z">新密码</li>
+			                 <li class="grzl_y"><input type="password" placeholder="请输入您的登录帐号"/></li>
+			              </ul> -->
+			              <ul>
+			                 <li class="grzl_z">新密码</li>
+			                 <li class="grzl_y"><input type="password" placeholder="请输入新密码"/ class="newPassword"></li>
+			              </ul>
+			              <ul>
+			                 <li class="grzl_z">再次输入密码</li>
+			                 <li class="grzl_y"><input type="password" placeholder="请再次输入您的密码"/ class="rePassword"></li>
+			              </ul>
+			              <div style="clear:both;"></div>
+			              <div class="bcsj">
+			                 <span class="bcsj_1" onclick="updatePass(pid,this)">确认</span>
+			              </div>
+			         </div>
+			         
+			     </div>
+			     <div style="clear:both;"></div>
+			</div>
+			
+			<section class="footer"></section>
+		</div>
+		<div class="ceb">
+		    <ul>
+		       <li><img alt="图片" src="../img/yc-gwc.jpg"></li>
+		       <li><img alt="图片" src="../img/yc-kf.jpg"></li>
+		       <li><img alt="图片" src="../img/yc-APP.jpg"></li>
+		       <li class="fhdb"><img alt="图片" src="../img/yc-fhdb.jpg"></li>
+		    </ul>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="../js/style.js" ></script>
+	<script type="text/javascript" src="../js/register.js" ></script>
+</html>
+<script>
+//回到顶部
+   $(function(){
+      $('.fhdb').click(function() {
+      $('body,html').animate({scrollTop:0},300);
+    });
+   });
+</script>
+<script>
+	function updatePass(pid,thisid){
+		var oldPassword = $(thisid).parents(".grzl").find(".oldPassword").val();
+		var newPassword = $(thisid).parents(".grzl").find(".newPassword").val();
+		var rePassword = $(thisid).parents(".grzl").find(".rePassword").val();
+		if(newPassword == rePassword){
+			updatePassword(pid,oldPassword,newPassword);
+			location = getRealPath()+"/personal_2.html";
+		}
+		else{
+			alert("两次密码输入不一致");
+		}
+	}
+</script>
+<script>
+var pid=loginInfo.pid;
+</script>
+
+

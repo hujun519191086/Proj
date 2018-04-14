@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>海淘云购|购物车</title>
+		<link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap3.min.js" ></script>
+		<script type="text/javascript" src="js/Calculation.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top"></div>
+			<section class="logo">
+				<div class="logo-img pull-left">
+					<a href="index.html"><img src="img/logo1.png" /></a>
+				</div>
+				<div class="logo-step pull-right">
+					<img src="img/step_1.png" />
+				</div>
+			</section>
+			<section class="body shop_cart">
+				<div class="body-table">
+					<table class="table table-bordered" >
+						<thead>
+							<tr>
+								<td width="50px"><input  type="checkbox" onclick="iselect()" id="All"/></td>
+								<td style="text-align: left;">商品名称</td>
+								<td width="100px">价值(元)</td>
+								<td width="125px">夺宝单价(元/人次)</td>
+								<td width="150px">参与人次</td>
+								<!--<td width="150px">参与期数</td>-->
+								<td width="100px">小计(元)</td>
+								<td width="70px">操作</td>
+							</tr>
+						</thead>
+						<tbody class="table_1" id="myTable">
+							
+						</tbody>
+					</table>
+					<table class="table table-sum">
+						<tr>
+							<td style="text-align: left;" onclick="removeRow();"><a style="cursor:pointer;">删除选中</a></td>
+							<td class="all_sum" colspan="5">总计:<span class="all_sum_money">0</span></td>
+						</tr>
+					</table>
+					<div class="buttons">
+						<div class="to_index pull-left">
+							<a href="index.html" class="button">返回首页</a>
+							<span>可以一次参与多期商品哦 <a href="">详情</a></span>
+						</div>
+						<div class="confirm pull-right">
+							<button type="button" class="button button-caution" onclick = "toPay()">下单</button>
+							<p>夺宝有风险,参与需谨慎</p>
+						</div>
+					</div>
+				</div>
+				<div class="blank"></div>
+			</section>
+			<section class="footer"></section>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/style.js" ></script>
+	<script type="text/javascript" src="js/register.js" ></script>
+</html>
+<script>
+function LoadShoppingCart(pid){
+	$.ajax({
+		type:"POST",
+		url:"./servlet/LoadShoppingCart",
+		async:false,
+		data:{"pid":pid},
+		success:function(res){
+			var obj = JSON.parse(res);
+			var length = obj.cartList.length;
+			var html='';
+			for(var i=0;i<length;i++){
+				var gid = obj.cartList[i].gid;
+				var goods_name = obj.cartList[i].goods_name;
+				var totalCount = obj.cartList[i].totalCount;//总需人次
+				var needCount = obj.cartList[i].needCount;//剩余人次
+				var buyCount = obj.cartList[i].buyCount;//购买件数
+				if(buyCount>needCount||buyCount<0){
+					buyCount=needCount; 
+					updateBuyCount(pid,gid,needCount-buyCount);
+				};
+				var onecCount = obj.cartList[i].onecCount;//单价
+				var zj = totalCount * onecCount;
+				var xj = onecCount * buyCount; //小计
+				var goods_img = obj.cartList[i].goods_img;//图片路径
+				var dis_imgs = obj.cartList[i].dis_imgs;//图片路径
+				var arr_dis_imgs = JSON.parse(dis_imgs);//图片路径
+				
+				
+				html +=	'<tr class="table_list" gid = '+gid+'> ';
+				html +=	'<td class="checkboxs"><input type="checkbox" value="1" name="newslist" class="newslist" onclick="news_list(this)" /></td>';
+				html +=	'<td class="pro_info">';
+				html +=	'<div class="img">';
+				html +=	'<img src="'+goods_img+'/'+arr_dis_imgs[0]+'"  width="50" height="50"/>';
+				html +=	'</div>';
+				html +=	'<p class="title"><a href="details.html?gid='+gid+'" style="color:#1699ff;">'+goods_name+'</a></p>';
+				html +=	'<p>总需<font>'+totalCount+'</font>人次参与,还剩:'+needCount+'人次</p>';
+				html +=	'</td>';
+				html +=	'<td>'+zj+'</td>';
+				html +=	'<td class="once">'+onecCount+'</td>';
+				html +=	'<td class="number number_1">';
+				html +=	'<div class="input-group">';
+				html +=	'<span class="input-group-addon" onclick="minus_count(this,\''+pid+'\',\''+gid+'\')"><i class="glyphicon glyphicon-minus"></i></span>';
+				html +=	'<input type="text" class="form-control number_1_value" onblur="number_1_value(this,'+needCount+',\''+pid+'\',\''+gid+'\')" value="'+buyCount+'" orgvalue="'+buyCount+'">';
+				html +=	'<span class="input-group-addon" onclick="adds_count(this,'+needCount+',\''+pid+'\',\''+gid+'\')"><i class="glyphicon glyphicon-plus"></i></span>';
+				html +=	'</div>';
+				html +=	'</td>';
+				//html +=	'<td class="number number_2">';
+				//html +=	'<div class="input-group">';
+				//html +=	'<span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>';
+				//html +=	'<input type="text" class="form-control" value="1" id="number_2">';
+				//html +=	'<span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i></span>';
+				//html +=	'</div>';
+				//html +=	'</td>';
+				html +=	'<input type="hidden" class="checkbox_val" value="0" />';
+				html +=	'<td class="sum">'+xj+'</td>';
+				html +=	'<td class="del" onclick="deleteRow(this,\''+pid+'\',\''+gid+'\')"><a>删除</a></td>';
+				html +=	'</tr>';
+			};
+			$(".table_1").html(html);
+			
+			
+	 
+		}
+	});
+}
+</script>
+<script>
+   var pid=$.cookie("pid");
+   LoadShoppingCart(pid);
+  
+   
+   function deleteRow(r,pid,gid){
+   //单个删除
+	var i=r.parentNode.rowIndex-1;
+	if(removeShopCart(pid,gid)){
+		document.getElementById('myTable').deleteRow(i);
+		var count = parseInt($(".all_sum_money").text());
+		var sum = $(r).parent().find(".sum").text();
+		var checked = $(r).parent().find("[name='newslist']").is(':checked');
+		if(checked){
+			count -= parseInt(sum);
+		}
+		$(".all_sum_money").html(count);
+	}
+	else{
+		alert("记录删除失败,请稍候重试");
+	}
+}
+
+function toPay(){
+	 var gido = "";
+	var obj = document.getElementsByClassName("table_list");
+	var objCheckBox;
+	for(var i = 0; i < obj.length; i++){
+		objCheckBox = obj[i].getElementsByTagName("input");
+		if(objCheckBox[0].checked){
+			gido = gido + obj[i].getAttribute("gid")+",";	
+		}
+	}
+	if(gido==null||gido == undefined || gido == ""){
+		alert("还未选择商品！");
+	}else{
+		
+		ajaxJumpTo(gido,pid);
+		//window.location.href = "./servlet/weixinpayServlet?gid="+gido+"&pid="+pid;
+	}
+}
+function ajaxJumpTo(gido, pid){
+	$.ajax({
+	            url: "./servlet/TradeNoServlet",
+	            type: "POST",
+	            dataType:"json",
+	            data:{
+	            gid:gido,
+	            pid:pid
+	            },
+	            success: function (res) {	            	
+	                 //订单状态为1表示支付成功
+	                 	
+	                   window.location.href = "TradeNo.html?tradeno="+res; //页面跳转
+	            },
+	            error: function () {
+	                 	 alert("下单失败，请重试");
+	                 	
+	            }
+	        });
+}
+function removeRow(){
+	//多个删除
+   var chkObj=document.getElementsByName("newslist");
+   //var tabObj=document.getElementById("myTable");
+   for(var k=0;k<chkObj.length;k++){
+    if(chkObj[k].checked){
+    chkObj[k].parentNode.parentNode.getElementsByClassName("del")[0].onclick();
+     //tabObj.deleteRow(k);
+     k=-1;
+    }
+   }
+  }
+
+function removeShopCart(pid,gid){
+	//移除数据库购物车记录
+	var flag=false;//数据库操作成功标记
+	$.ajax({
+		type:"post",
+		url:"./servlet/DeleteShoppingCart",
+		async:false,
+		data:{"pid":pid,"gid":gid},
+		success:function(res){
+			flag=true;
+		},
+		error:function(res){
+			flag=false;
+		}
+	});
+	return flag;
+	
+}
+</script>
+
+
+
+

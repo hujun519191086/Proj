@@ -1,0 +1,59 @@
+<section class="logo">
+	<div class="logo-img pull-left">
+		<a href="index.html"><img src="/SPserver/img/logo1.png" /></a>
+	</div>
+	<div style="font-size:18px;padding:16px;float:left"></div>
+	<div class="logo-select pull-right">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="请输入要搜索的商品" >
+			<span class="input-group-btn">
+		        <button class="btn btn-default" type="button"><img src="/SPserver/img/search.png"/></button>
+	      </span>
+		</div>
+		<a class="button button-caution shopping-cart" href="ShopCart.html"><img src="/SPserver/img/cart.png"/>清单<span class="badge">0</span></a>
+	</div>
+</section>
+<nav class="nav" style="display:none;">
+	<div class="button-group">
+     	<a href="/SPserver/index.html?page=Index" class="button color-red Index">首页</a>
+	    <a href="" class="button color-red">一元专区</a>
+	    <a href="" class="button color-red">十元专区</a>
+	    <a href="/SPserver/NewAnnounce.html?page=NewAnnounce" class="button color-red NewAnnounce">最新揭晓</a>
+	    <a href="" class="button color-red">晒单分享</a>
+  	</div>
+</nav>
+<div class="nav">
+    <ul>
+        <li>所有商品分类</li>
+        <li><a href="/SPserver/index.html?page=Index" class=" Index">首页</a><span class="xg">/</span></li>
+        <li><a href="/SPserver/page.html" >产品中心</a><span class="xg">/</span></li>
+        <li>十元专区<span class="xg">/</span></li>
+        <li>百元专区<span class="xg">/</span></li>
+        <li>新手专区<span class="xg">/</span></li>
+        <li>揭晓/晒单<span class="xg">/</span></li>
+        <li class="sj">手机APP下载</li>
+        <div style="clear:both;"></div>
+    </ul>
+</div>
+
+<script>
+function LoadShoppingCart_1(pid){
+	$.ajax({
+		type:"POST",
+		url:"./servlet/LoadShoppingCart",
+		async:false,
+		data:{"pid":pid},
+		success:function(res){
+			var obj = JSON.parse(res);
+			var length = obj.cartList.length;
+			$(".badge").html(length);
+		}
+	});
+}
+</script>
+<script>
+var pid=loginInfo.pid;
+LoadShoppingCart_1(pid);
+</script>
+
+

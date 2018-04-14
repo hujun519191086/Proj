@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Catelogs>
+	<Catelog catelogId="100000" catelogName="奢侈品区" img="img/scpq.jpg"></Catelog>
+	<Catelog catelogId="200000" catelogName="手机数码" img="img/sjsm.jpg"></Catelog>
+	<Catelog catelogId="300000" catelogName="服饰百货" img="img/fsbh.jpg"></Catelog>
+	<Catelog catelogId="400000" catelogName="金银珠宝" img="img/jyzb.jpg"></Catelog>
+	<Catelog catelogId="500000" catelogName="家用电器" img="img/jydq.jpg"></Catelog>
+	<Catelog catelogId="600000" catelogName="海淘超市" img="img/htcs.jpg"></Catelog>
+	<Catelog catelogId="700000" catelogName="其它商品" img="img/other.jpg"></Catelog>
+</Catelogs>

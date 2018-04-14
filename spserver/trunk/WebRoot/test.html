@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test.html</title>
+    <meta charset="utf-8" />
+    <link rel = "icon" href = "haitao.ico" type = "image/x_icon">
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+  </head>
+  
+  <body>
+    <form action="./servlet/UpLoadGoodsServlet" enctype="multipart/form-data" method="post">
+    	省：<input type="text" name="province"><br>
+    	市：<input type="text" name="city"><br>
+    	县：<input type="text" name="district"><br>
+    	<input type="text" name="cat" style="display:none" value="奢侈品区"><br>
+    	分类：<select name="catelog_id" onchange="changeCat(this)">
+    		<option value="100000" selected="selected">奢侈品区</option>
+    		<option value="200000">手机数码</option>
+    		<option value="300000">服饰百货</option>
+    		<option value="400000">金银珠宝</option>
+    		<option value="500000">家用电器</option>
+    		<option value="600000">海淘超市</option>
+    		<option value="700000">其它商品</option>
+    	</select><br>
+    	物品名称：<input type="text" name="gName"><br>
+    	总需人次：<input type="text" name="totalCount"><br>
+    	单价：<input type="text" name="onecCount"><br>
+    	物品别名：<input type="text" name="second_name"><br>
+    	<input type="text" name="gid" style="display:none"><br>
+    	库存：<input type="text" name="stock"><br>
+	    展示图:<input type="file" name="dis_img" onchange="addDisImg(this)"><br>
+    	详情图:<input type="file" name="detail_img" onchange="addDetailImg(this)"><br>
+    	
+    	<input type="submit" value="提交">
+    </form>
+  </body>
+  <script>
+  	function changeCat(obj){
+  		var index = obj.selectedIndex;
+  		document.getElementsByName("cat")[0].value = obj.options[index].innerHTML;
+  	}
+  	function addDisImg(obj){
+  		var dis_img = document.createElement("input");
+  		dis_img.type = "file";
+  		dis_img.name = "dis_img";
+  		dis_img.setAttribute("onchange","addDisImg(this)");
+  		var parent = obj.parentNode;
+  		if(parent.lastChild == dis_img){
+  			parent.appendChild(dis_img);
+  		}
+  		else{
+  			parent.insertBefore(dis_img,obj.nextSibling);
+  		}
+  		
+  	}
+  	function addDetailImg(obj){
+  		var detail_img = document.createElement("input");
+  		detail_img.type = "file";
+  		detail_img.name = "detail_img";
+  		detail_img.setAttribute("onchange","addDetailImg(this)");
+   		var parent = obj.parentNode;
+  		if(parent.lastChild == detail_img){
+  			parent.appendChild(detail_img);
+  		}
+  		else{
+  			parent.insertBefore(detail_img,obj.nextSibling);
+  		}
+  		
+  		
+  	}
+  </script>
+</html>

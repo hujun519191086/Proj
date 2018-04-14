@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>一元购|购物车</title>
+		<link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap3.min.js" ></script>
+		<script type="text/javascript" src="js/Calculation.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top">
+				<div class="top-content">
+					<label>欢迎来到一元海购</label>
+					<span>
+						<font class="top-label-login"><a href="">请登录</a></font>
+						<font class="top-label-register"><a href="">免费注册</a></font>
+						<font class="top-label-line">|</font>
+						<font class="top-label-mybaby"><a href="">我的夺宝<i class="glyphicon glyphicon-menu-down"></i></a></font>
+					</span>
+				</div>
+			</div>
+			<section class="logo">
+				<div class="logo-img pull-left">
+					<img src="img/logo.png" />
+				</div>
+				<div class="logo-step pull-right">
+					<img src="img/step_1.png" />
+				</div>
+			</section>
+			<section class="body shop_cart">
+				<div class="body-table">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<td width="50px"><input  type="checkbox" onclick="iselect()" /></td>
+								<td style="text-align: left;">商品名称</td>
+								<td width="100px">价值(元)</td>
+								<td width="125px">夺宝单价(元/人次)</td>
+								<td width="150px">参与人次</td>
+								<td width="150px">参与期数</td>
+								<td width="100px">小计(元)</td>
+								<td width="70px">操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="table_list">
+								<td class="checkboxs"><input type="checkbox" value="1" name="newslist" onclick="news_list(this)" /></td>
+								<td class="pro_info">
+									<div class="img">
+										<img src="img/pro_10.png" />
+									</div>
+									<p class="title">宝马3系 BMW 2016款320i时尚型</p>
+									<p>总需<font>6888</font>人次参与,还剩:1000人次</p>
+								</td>
+								<td>468000</td>
+								<td class="once">100</td>
+								<td class="number number_1">
+									<div class="input-group">
+									  	<span class="input-group-addon" onclick="minus_count(this)"><i class="glyphicon glyphicon-minus"></i></span>
+									  	<input type="text" class="form-control number_1_value" value="1">
+									  	<span class="input-group-addon" onclick="adds_count(this)"><i class="glyphicon glyphicon-plus"></i></span>
+									</div>
+								</td>
+								<td class="number number_2">
+									<div class="input-group">
+									  	<span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
+									  	<input type="text" class="form-control" value="1" id="number_2">
+									  	<span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i></span>
+									</div>
+								</td>
+								<input type="hidden" class="checkbox_val" value="0" />
+								<td class="sum">100</td>
+								<td class="del"><a href="">删除</a></td>
+							</tr>
+							<tr class="table_list">
+								<td class="checkboxs"><input type="checkbox" value="1" name="newslist" onclick="news_list(this)" /></td>
+								<td class="pro_info">
+									<div class="img">
+										<img src="img/pro_9.png" />
+									</div>
+									<p class="title">iPad Pro 12.9英寸 32G WIFI版</p>
+									<p>总需<font>6888</font>人次参与,还剩:1000人次</p>
+								</td>
+								<td>6888</td>
+								<td class="once">1</td>
+								<td class="number number_1">
+									<div class="input-group">
+									  	<span class="input-group-addon" onclick="minus_count(this)"><i class="glyphicon glyphicon-minus"></i></span>
+									  	<input type="text" class="form-control number_1_value" value="1">
+									  	<span class="input-group-addon" onclick="adds_count(this)"><i class="glyphicon glyphicon-plus"></i></span>
+									</div>
+								</td>
+								<td class="number number_2">
+									<div class="input-group">
+									  	<span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
+									  	<input type="text" class="form-control" value="1">
+									  	<span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i></span>
+									</div>
+								</td>
+								<input type="hidden" class="checkbox_val" value="0" />
+								<td class="sum">10</td>
+								<td class="del"><a href="">删除</a></td>
+							</tr>
+							
+						</tbody>
+					</table>
+					<table class="table table-sum">
+						<tr>
+							<td style="text-align: left;"><a href="">删除选中</a></td>
+							<td class="all_sum" colspan="5">总计:<span class="all_sum_money">0</span></td>
+						</tr>
+					</table>
+					<div class="buttons">
+						<div class="to_index pull-left">
+							<a href="index.html" class="button">返回首页</a>
+							<span>可以一次参与多期商品哦 <a href="">详情</a></span>
+						</div>
+						<div class="confirm pull-right">
+							<button type="button" class="button button-caution">结算</button>
+							<p>夺宝有风险,参与需谨慎</p>
+						</div>
+					</div>
+				</div>
+				<div class="blank"></div>
+			</section>
+			<section class="footer"></section>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/style.js" ></script>
+</html>

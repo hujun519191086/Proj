@@ -1,0 +1,171 @@
+button {
+	cursor: pointer;
+}
+
+
+
+.container {
+	font-family: 微软雅黑;
+	float: right;
+	padding-top: 32px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 26px;
+	background-color: #ffffff;
+	margin-right: 360px;
+	margin-top: 199px;
+	background-color: #ffffff;
+	padding-top: 32px;
+	padding-top: 32px;
+	background-color: #ffffff;
+}
+
+.linearlayout {
+	width: 300px;
+	height: 40px;
+	margin-top: 20px;
+}
+
+.linearlayout_auto {
+	width: 300px;
+	margin-top: 20px;
+}
+
+.linearlayout_30 {
+	width: 300px;
+	margin-top: 30px;
+}
+
+.checkbox {
+	vertical-align: middle;
+	width: 14px;
+	height: 14px;
+	width: 14px;
+}
+
+.label {
+	float: right;
+	color: #999999;
+	vertical-align: middle;
+}
+
+.text {
+	width: 300px;
+	height: 40px;
+	width: 300px;
+}
+
+.button {
+	text-decoration: none;
+	display: inline-block;
+	height: 40px;
+	width: 300px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Heiti SC', '\5fae\8f6f\96c5\9ed1', '\9ed1\4f53';
+	color: white;
+	border: 0 none;
+	background-color: #167efb;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	cursor: pointer;
+}
+
+.btn-red {
+	background-color: #FF0000;
+}
+
+.btn-red:hover {
+	background-color: #FF0066;
+}
+
+.btn-red:active {
+	background-color: #FF0066;
+}
+
+.btn-gray {
+	background-color: #cccccc;
+}
+
+.btn-gray:hover {
+	background-color: #999999;
+}
+
+.btn-gray:active {
+	background-color: #999999;
+}
+
+.otherimg_10 {
+	margin-left: 10px;
+	height: 26px;
+	width: 26px;
+	vertical-align: middle;
+}
+
+.otherimg_20 {
+	margin-left: 20px;
+	height: 26px;
+	width: 26px;
+	vertical-align: middle;
+}
+
+/* placeholder通用 */
+::-webkit-input-placeholder {
+	font-size: 16px;
+	font-family: 微软雅黑;
+	color: #999999;
+	font-family: 微软雅黑;
+}
+
+::-moz-placeholder {
+	font-size: 16px;
+	font-family: 微软雅黑;
+	color: #999999;
+} /* firefox 19+ */
+:-ms-input-placeholder {
+	font-size: 16px;
+	font-family: 微软雅黑;
+	color: #999999;
+} /* ie */
+input:-moz-placeholder {
+	font-size: 16px;
+	font-family: 微软雅黑;
+	color: #999999;
+}
+
+/* webkit专用 */
+#field2::-webkit-input-placeholder {
+	color: #333333;
+}
+
+#field3::-webkit-input-placeholder {
+	color: #333333;
+	background: lightgreen;
+	text-transform: uppercase;
+}
+
+#field4::-webkit-input-placeholder {
+	font-style: italic;
+	text-decoration: overline;
+	letter-spacing: 3px;
+	color: #999;
+}
+
+/* mozilla专用 */
+#field2::-moz-placeholder {
+	color: #333333;
+}
+
+#field3::-moz-placeholder {
+	color: #333333;
+	background: lightgreen;
+	text-transform: uppercase;
+}
+
+#field4::-moz-placeholder {
+	font-style: italic;
+	text-decoration: overline;
+	letter-spacing: 3px;
+	color: #999;
+}

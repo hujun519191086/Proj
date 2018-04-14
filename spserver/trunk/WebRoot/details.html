@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>详情页</title>
+		<link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/bootstrap3.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="js/shoppingCart.js" ></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1628611ea2b6b1401ad53196350836d5"></script>
+	    <script type="text/javascript">
+		  $(document).ready(function(){
+			  var showproduct = {
+				  "boxid":"showbox",
+				  "sumid":"showsum",
+				  "boxw":450,//宽度,该版本中请把宽高填写成一样
+				  "boxh":450,//高度,该版本中请把宽高填写成一样
+				  "sumw":60,//列表每个宽度,该版本中请把宽高填写成一样
+				  "sumh":60,//列表每个高度,该版本中请把宽高填写成一样
+				  "sumi":15,//列表间隔
+				  "sums":5,//列表显示个数
+				  "sumsel":"sel",
+				  "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
+				  "lastid":"showlast",
+				  "nextid":"shownext"
+				  };//参数定义	  
+			 $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+		  });
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top"></div>
+			<div class="hx"></div>
+			<div class="logo-nav"></div>
+			<div class="xq_1">
+			     <div class="xq_1_1">
+			                           首页><span class="huoq"></span>><span class="jies"></span>
+			     </div>
+			     <div class="xq_1_2">
+			         <div class="qx_1_2_z">
+			               <div id="showbox">
+							  
+						   </div><!--展示图片盒子-->
+						   <div id="showsum"></div><!--展示图片里边-->
+						   <p class="showpage">
+							  <a href="javascript:void(0);" id="showlast"> < </a>
+							  <a href="javascript:void(0);" id="shownext"> > </a>
+						   </p>
+						   <ul class="zpbz">
+						      <li><img src="img/icon_1.png"/>公正公开</li>
+						      <li><img src="img/icon_4.png"/>正品保证</li>
+						      <li><img src="img/icon_3.png"/>100%正品保证</li>
+						      <li><img src="img/icon_2.png"/>免费配送</li>
+						   </ul>
+			         </div>
+			         <div class="qx_1_2_y">
+			               <div class="spjs"></div>
+			               <div class="spjs_2"></div>
+							<div class="spjs_3"><span class="bt"></span><span class="bt_1">期号<span class="qh"></span>每满总需人次，即抽取1人获得该商品</span></div>
+							<div class="progress" style="border-radius: 10px;">
+							   
+							</div>
+							<p style="margin-bottom:0px;"><span class="pull-left wz">总需人次</span><span class="zj wz">已参与人次</span><span class="pull-right wz">剩余人次</span></p>
+							<div class="blank"></div>
+							<p><span class="pull-left wz_1 zxrc"></span><span class="wz_2 cyrc"></span><span class="pull-right wz_1 syrc"></span></p>				
+				            <div class="spjs_4">
+				                                               参与:<span class="jian">-</span><input type="text" value="1" class="tx"/><span class="jia">+</span>人次 <img src="img/dbb.png"/>
+				            </div>
+				            <div class="spjs_5">
+				               <span class="gm">立即购买</span><span class="jrqd"><img src="img/gw.png"/>加入清单</span>
+				            </div>
+				            <div class="mycy">
+				                                                       您还没有参与此次夺宝哦！
+				            </div>
+			         </div>
+			         <div style="clear:both;"></div>
+			         <div class="xq_1_3">
+					     <div class="xq_1_3_1">
+					          <span class="xq_sp djzh">商品详情</span><span class="db_jl" onclick="time_1(gid,period)">夺宝参与记录</span>
+					     </div>
+					     <div class="spxqjs">
+							 <div class="xq_1_3_5">
+								   
+							 </div>
+					     </div>
+					     <div class="spdbjl" style="display:none;">
+					          <div class="spdbjl_1">
+					               <div class="spdbjl_1_1">
+					                   <img src="img/sj_1.png"/>
+					               </div>
+					               <ul id="jtsj">
+					                  
+					               </ul>
+					          </div>
+					     </div>
+					</div>
+			     </div>
+			</div>
+			
+		</div>
+		<div class="nav-right"></div>
+	</body>
+	<script type="text/javascript" src="js/style.js" ></script>
+	<script type="text/javascript" src="js/register.js" ></script>
+	<script>
+		
+	</script>
+	
+</html>
+<script>
+   
+   //这是物品增减
+   $(function(){
+      $(".jia").click(function(){
+         var jia=$(".tx").val()*1;
+          if(jia<1||isNaN(jia)){
+            jia=1;
+         }else{
+            jia+=1;
+         }
+          $(".tx").val(jia);
+      });
+      $(".jian").click(function(){
+         var jian=$(".tx").val()*1;
+         if(jian<=1||isNaN(jian)){
+            jian=1;
+         }else{
+            jian-=1;
+         }
+         $(".tx").val(jian);
+      });
+   })
+   
+</script>
+<script>
+	function loadInfo(pid,gid){
+		$.ajax({
+		type:"POST",
+		url:"./servlet/LoadGoods",
+		async:false,
+		data:{"pid":pid,"gid":gid},
+		success:function(res){
+			var obj = JSON.parse(res);
+			console.log(obj.goods_list);
+			var goods_name = obj.goods_list[0].goods_name;
+			var onecCount=obj.goods_list[0].onecCount;
+			period=obj.goods_list[0].period;//全局变量 期号
+			var progress = obj.goods_list[0].progress;
+			
+			if(onecCount=1){
+			   onecCount="一元夺宝";
+			}else if (onecCount=10){
+			   onecCount="十元夺宝";
+			}else{
+			   onecCount="百元夺宝";
+			};
+			var jdt="";
+			jdt += '<div class="progress-bar color-red" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: '+progress+'%"></div>';
+			var totalCount= obj.goods_list[0].totalCount;
+			var needCount= obj.goods_list[0].needCount;
+			var followCount= obj.goods_list[0].followCount;
+			var catelog= obj.goods_list[0].catelog;
+			$(".spjs").html(goods_name);//商品介绍
+			$(".jies").html(goods_name);
+			$(".bt").html(onecCount);//夺宝
+			$(".qh").html(period);//期号
+			$(".progress").html(jdt);//进度条
+			$(".zxrc").html(totalCount);//总需人次
+			$(".cyrc").html(followCount);//参与人次
+			$(".syrc").html(needCount);//剩余人次
+			$(".huoq").html(catelog);//获取分类
+			$(".gm").click(function(){mainBuy(""+gid,""+pid);});
+			$(".jrqd").click(function(){mainShopcart(""+gid,""+pid);});
+			
+			
+			$(".tx").blur(function(){
+		         var val=$(".tx").val()*1;
+		          if(isNaN(val)||val>needCount||1>val){
+		             val=needCount;
+		          }
+		          $(".tx").val(val);
+		      });
+		      
+		    $(".jia").click(function(){
+		         var jia=$(".tx").val()*1;
+		          if(jia<1||needCount<=jia){
+		            jia=needCount-1;
+		         }
+		          $(".tx").val(jia);
+		      });
+			
+			//图片
+			var goods_img = obj.goods_list[0].goods_img;
+			var dis_imgs = obj.goods_list[0].dis_imgs;
+			var arr_dis_imgs = JSON.parse(dis_imgs);
+			var xqtp="";
+			for(var j=0;j<arr_dis_imgs.length;j++){
+			   xqtp += '<img src="'+goods_img+'/'+arr_dis_imgs[j]+'" width="450" height="450"/>';
+			}
+			$("#showbox").html(xqtp);
+			
+			
+			//详情图片
+			var detail_imgs = obj.goods_list[0].detail_imgs;
+			var arr_detail_imgs = JSON.parse(detail_imgs);
+			var xqtp_1="";
+			for(var j=0;j<arr_detail_imgs.length;j++){
+			   xqtp_1 += '<img src="'+goods_img+'/'+arr_detail_imgs[j]+'"/>';
+			}
+			$(".xq_1_3_5").html(xqtp_1);
+		},
+		error:function(res){
+			//alert("获取数据出错,请稍后再进入");
+		}
+	});
+	}
+	function getQueryString(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); return null; 
+} 
+</script>
+<script>
+//购买记录
+	function time_1(gid,period){
+		$.ajax({
+		type:"POST",
+		url:"./servlet/LoadGoodsBuyHistory",
+		async:false,
+		data:{"gid":gid,"period":period},
+		success:function(res){
+			var obj = JSON.parse(res);
+            var length = obj.goods_buy_his_list.length;
+			var sjz="";
+			for(var i=0;i<length;i++){
+			    var buy_Time = obj.goods_buy_his_list[i].buy_Time;  //购买时间
+				var nickname=obj.goods_buy_his_list[i].nickname;  //昵称
+				var buyCount=obj.goods_buy_his_list[i].buyCount;   //参与人次
+				var format = "yyyy-MM-dd hh:mm:ss";
+				sjz += '<li>';
+	            sjz += '<span class="sj_1">'+formatDate(new Date(parseInt(buy_Time)), format)+'</span>';
+	            sjz += '<img src="img/sj_2.png"/>';
+	            sjz += '<a class="ch">'+nickname+'</a>，参与了<span class="cs">'+buyCount+'人次</span>';
+	            sjz += '</li>';
+            };
+			$("#jtsj").html(sjz);//时间轴
+		},
+		error:function(res){
+			//alert("获取数据出错,请稍后再进入");
+		}
+	});
+	}
+	function getQueryString(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); return null; 
+} 
+</script>
+<script>
+	var gid = getQueryString("gid");
+	var pid = loginInfo.pid;
+	if(pid == undefined){
+		pid=0;
+	}
+	loadInfo(pid,gid);
+	
+</script>
+<script>
+   //夺宝记录和商品详情的切换
+   $(function(){
+       $(".xq_sp").click(function(){
+          $(".spdbjl").css("display","none")
+          $(".spxqjs").css("display","block")
+       });
+       $(".db_jl").click(function(){
+          $(".spxqjs").css("display","none")
+          $(".spdbjl").css("display","block")
+       });
+   });
+</script>
+<script>
+       $(".xq_1_3_1 span").click(function(){
+            $(".xq_1_3_1 span").each(function(){
+                $(".xq_1_3_1 span").removeClass("djzh");
+            })
+            $(this).addClass("djzh");
+        });
+</script>
+<script>
+function LoadShoppingCart_1(pid){
+	$.ajax({
+		type:"POST",
+		url:"./servlet/LoadShoppingCart",
+		async:false,
+		data:{"pid":pid},
+		success:function(res){
+			var obj = JSON.parse(res);
+			var length = obj.cartList.length;
+			$(".badge").html(length);
+		}
+	});
+}
+</script>
+
+
+<script>
+LoadShoppingCart_1(pid);
+</script>
+
+
+
+

@@ -1,0 +1,113 @@
+body {
+	margin: 0px;
+	background-color: #47c6f5
+}
+
+.root {
+	margin-top: 190px;
+	margin-right: 360px;
+	float: right;
+	height: 406px;
+	width: 390px;
+	background-color: #f8f8f8;
+}
+
+.form_div {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.register_phone {
+	display: inline-block;
+	width: 194px;
+	text-align: center;
+	border-bottom-color: #cccccc;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #cccccc;
+	float: left;
+	vertical-align: middle;
+	background-color: #ffffff;
+	height: 49px;
+}
+
+.register_email {
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+	width: 195px;
+	float: left;
+	border: none;
+	height: 50px;
+}
+
+.label_name {
+	color: #333333;
+	font-size: 16px;
+	font-family: 微软雅黑;
+	vertical-align: middle;
+	width: 94px;
+	display: inline-block;
+	text-align: right;
+}
+
+.button {
+	font-size: 20px;
+	font-family: 微软雅黑;
+	text-decoration: none;
+	text-align: center;
+	color: #333333;
+	line-height: 50px;
+}
+
+.input_eamil {
+	margin-top: 30px;
+	height: 40px;
+	width: 236px;
+}
+
+.input_pwd {
+	width: 236px;
+	height: 40px;
+}
+
+.div_20 {
+	margin-top: 20px;
+}
+
+.div_30 {
+	margin-top: 30px;
+}
+
+.email_code {
+	width: 120px;
+	height: 40px;
+}
+
+.send_email_code {
+	font-family: 微软雅黑;
+	font-size: 14px;
+	width: 106px;
+	color: #333333;
+	margin-left: 10px;
+	padding: 0px;
+	height: 40px;
+	text-align: center;
+}
+
+.sub_register {
+	font-family: 微软雅黑;
+	font-size: 20px;
+	color: #ffffff;
+	height: 40px;
+	background-color: #cccccc;
+	text-align: center;
+	width: 340px;
+	border: 0 none;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	cursor: pointer;
+}
+

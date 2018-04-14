@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>产品中心</title>
+		<link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.pagination.js"></script>
+		<script type="text/javascript" src="js/bootstrap3.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="js/kkpager.min.js"></script>
+		<script type="text/javascript" src="js/shoppingCart.js" ></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1628611ea2b6b1401ad53196350836d5"></script>
+	   
+		<script>
+		    yyjg=12;//一个页面显示几个商品
+			var order = 0;//默认按即将揭晓排序
+			function initPage(){
+				var pid = loginInfo.pid;
+				if(pid == undefined){
+					pid=0;
+				}
+				order = getParameter('order');
+				if(!order){
+					order = 0;
+				}
+				var loc = "";
+				catelog_id = getParameter('catelog_id');
+				
+				var page = getParameter('page');
+				if(!page){
+					page = 0;
+				}
+				else{
+					page = page - 1;
+				}
+				var pageCount = yyjg;
+				var target = $('#ejnr');
+				
+				drawMenu_page(catelog_id);
+				loadFLGoods(pid,page,loc,order,pageCount,catelog_id,target);
+				
+				//设置添加购物车动画效果
+				$(function(){
+					$('.add-to-cart').click(function(){
+						var flyElm = $(this).parent().parent().find("img").eq(0).clone().css('opacity','0.7');
+						flyElm.css({
+							'z-index': 9000,
+							'display': 'block',
+							'position': 'absolute',
+							'top': $(this).parent().parent().find("img").eq(0).offset().top +'px',
+							'left': $(this).parent().parent().find("img").eq(0).offset().left +'px',
+							'width': $(this).parent().parent().find("img").eq(0).width() +'px',
+							'height': $(this).parent().parent().find("img").eq(0).height() +'px'
+						});
+						$('body').append(flyElm);
+						flyElm.animate({
+							top:$('.shopping-cart').offset().top,
+							left:$('.shopping-cart').offset().left,
+							width:0,
+							height:0,
+						},'slow');
+					});
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top"></div>
+			<div class="hx"></div>
+			<div class="logo-nav"></div>
+			<div class="cont_1">
+			    <p>首页>全部商品><span class="flqy"></span></p>
+			    <div class="cont_1_2">全部商品（共<span class="spsl">0</span>件商品）</div>
+			    <div class="cont_1_3">
+			        <ul class="cont_1_3_1">
+			        </ul>
+			        <div style="clear:both;"></div>
+			    </div>
+			    <div class="cont_1_4">
+			        <div class="cont_1_4_1">排列：</div>
+			        <ul>
+			           <li class="djbh" onclick="loadFLGoods($.cookie('pid'),0,'',0,yyjg,getParameter('catelog_id'),$('#ejnr'));order=0">即将揭晓</li>
+			           <li onclick="loadFLGoods($.cookie('pid'),0,'',1,yyjg,getParameter('catelog_id'),$('#ejnr'));order=1">剩余人次</li>
+			           <li onclick="loadFLGoods($.cookie('pid'),0,'',2,yyjg,getParameter('catelog_id'),$('#ejnr'));order=2">热卖</li>
+			           <li onclick="loadFLGoods($.cookie('pid'),0,'',3,yyjg,getParameter('catelog_id'),$('#ejnr'));order=3">最新商品</li>
+			           <li onclick="loadFLGoods($.cookie('pid'),0,'',4,yyjg,getParameter('catelog_id'),$('#ejnr'));order=4">价格</li>
+			        </ul>
+			        <div style="clear:both;"></div>
+			    </div>
+			</div>
+			<section class="body" id="index_body">
+			   <div id="ejnr">
+			   </div>
+			   <div style="clear:both;"></div>
+			</section>
+			
+			
+		    <div style="width:800px;margin:50px auto;">
+				<div id="kkpager"></div>
+			</div>
+			<div style="clear:both;"></div>
+			<section class="footer"></section>
+		</div>
+		<div class="nav-right"></div>
+	</body>
+	<script type="text/javascript" src="js/style.js" ></script>
+	<script type="text/javascript" src="js/register.js" ></script>
+	<script>
+		initPage();
+	</script>
+	
+	
+</html>
+<script>
+ 
+//排序变色
+$(function(){
+        $(".cont_1_4 ul li").click(function(){
+            $(".cont_1_4 ul li").each(function(){
+                $(".cont_1_4 ul li").removeClass("djbh");
+            })
+            $(this).addClass("djbh");
+        })
+
+    })
+
+//跳转页面
+$(function(){
+        $(".tzys ul li").click(function(){
+            $(".tzys ul li").each(function(){
+                $(".tzys ul li").removeClass("tzys_1");
+            })
+            $(this).addClass("tzys_1");
+        });
+
+    });
+</script>
+<script >
+	//分页
+	//init
+	$(function() {
+	   
+		var page = getParameter('page');
+		var catelog_id = getParameter('catelog_id');
+		if(!catelog_id){
+			catelog_id=0;
+		}
+		var totalRecords = loadGoodszs(catelog_id);
+		var totalPage;
+		if(totalRecords%yyjg==0){
+			totalPage = totalRecords/yyjg;
+		}
+		else{
+			totalPage = (totalRecords/yyjg)+1;
+		}
+		if (!page) {
+			page = 1;
+		}
+		
+		//生成分页
+		//有些参数是可选的，比如lang，若不传有默认值
+		kkpager.generPageHtml({
+			pno : page,
+			//总页码
+			total : totalPage,
+			//总数据条数
+			totalRecords : totalRecords,
+			//链接前部
+			hrefFormer : 'page',
+			//链接尾部
+			hrefLatter : '.html',
+			getLink : function(n) {
+				return this.hrefFormer + this.hrefLatter + "?page=" + n+"&catelog_id="+catelog_id+"&order="+order;
+			}
+		/*
+		,lang				: {
+			firstPageText			: '首页',
+			firstPageTipText		: '首页',
+			lastPageText			: '尾页',
+			lastPageTipText			: '尾页',
+			prePageText				: '上一页',
+			prePageTipText			: '上一页',
+			nextPageText			: '下一页',
+			nextPageTipText			: '下一页',
+			totalPageBeforeText		: '共',
+			totalPageAfterText		: '页',
+			currPageBeforeText		: '当前第',
+			currPageAfterText		: '页',
+			totalInfoSplitStr		: '/',
+			totalRecordsBeforeText	: '共',
+			totalRecordsAfterText	: '条数据',
+			gopageBeforeText		: ' 转到',
+			gopageButtonOkText		: '确定',
+			gopageAfterText			: '页',
+			buttonTipBeforeText		: '第',
+			buttonTipAfterText		: '页'
+		}*/
+
+		//,
+		//mode : 'click',//默认值是link，可选link或者click
+		//click : function(n){
+		//	this.selectPage(n);
+		//  return false;
+		//}
+		});
+	});
+</script>
+<script>
+    $(function(){
+       $(".curr:first").addClass("curr_1");
+    });
+</script>
+<script>
+ $(function(){
+	   var curr_url = window.location.href;  //获取当前URL
+	   var la = window.location.pathname;
+	   var lai=la.substr(10);
+	   var li = window.location.search;
+	    var curr_url=lai+li;
+	    $(".cont_1_3_1 li a").each(function(i,n){  //循环导航的a标签
+	       var href = $(this).attr('href'); //a标签中的href链接
+	       if(href == curr_url){  //如果当前URL,和a标签中的href相等。
+	        $(this).addClass("jtbh");  //那么就给这个a标签增加home_page类。
+	    }
+	  });
+  });
+</script>
+<script>
+function LoadShoppingCart_1(pid){
+	$.ajax({
+		type:"POST",
+		url:"./servlet/LoadShoppingCart",
+		async:false,
+		data:{"pid":pid},
+		success:function(res){
+			var obj = JSON.parse(res);
+			var length = obj.cartList.length;
+			$(".badge").html(length);
+		}
+	});
+}
+</script>
+<script>
+LoadShoppingCart_1(pid);
+</script>
+
+
+
+

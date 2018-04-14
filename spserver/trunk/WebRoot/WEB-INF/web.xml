@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<listener>
+		<listener-class>frame.ServletInitApplication</listener-class>
+	</listener>
+	
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MainInfoServlet</servlet-name>
+		<servlet-class>control.ui.MainInfoServlet</servlet-class>
+		</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoginInfoServlet</servlet-name>
+		<servlet-class>control.ui.LoginInfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>register username password</description>
+		<display-name>register_username</display-name>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>control.ui.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoginServer</servlet-name>
+		<servlet-class>ios.client.LoginServer</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>RegistServer</servlet-name>
+		<servlet-class>ios.client.RegistServer</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>TestPost</servlet-name>
+		<servlet-class>test.TestPost</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>UpLoadGoodsServlet</servlet-name>
+		<servlet-class>control.ui.UpLoadGoodsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoadGoods</servlet-name>
+		<servlet-class>control.ui.LoadGoods</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoadGoodsServer</servlet-name>
+		<servlet-class>ios.client.LoadGoodsServer</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BuyGoodsServlet</servlet-name>
+    <servlet-class>control.ui.BuyGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>testTimestamp</servlet-name>
+    <servlet-class>test.testTimestamp</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>testCatelog</servlet-name>
+    <servlet-class>test.testCatelog</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShoppingCarServlet</servlet-name>
+    <servlet-class>control.ui.ShoppingCarServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>test</servlet-name>
+    <servlet-class>control.ui.test</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Insert2ShoppingCart</servlet-name>
+    <servlet-class>control.ui.Insert2ShoppingCart</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteShoppingCart</servlet-name>
+    <servlet-class>control.ui.DeleteShoppingCart</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadCatelogs</servlet-name>
+    <servlet-class>control.ui.LoadCatelogs</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadPublishGoods</servlet-name>
+    <servlet-class>control.ui.LoadPublishGoods</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadADs</servlet-name>
+    <servlet-class>control.ui.LoadADs</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadSoonPublish</servlet-name>
+    <servlet-class>control.ui.LoadSoonPublish</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadRecentPublish</servlet-name>
+    <servlet-class>control.ui.LoadRecentPublish</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>testCompressImg</servlet-name>
+    <servlet-class>test.testCompressImg</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>weixinpayServlet</servlet-name>
+    <servlet-class>wechatPay.weixinpayServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Wei_xinNotifyServlet</servlet-name>
+    <servlet-class>wechatPay.Wei_xinNotifyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadShoppingCart</servlet-name>
+    <servlet-class>control.ui.LoadShoppingCart</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadPubHistory</servlet-name>
+    <servlet-class>control.ui.LoadPubHistory</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadGoodsBuyHistory</servlet-name>
+    <servlet-class>control.ui.LoadGoodsBuyHistory</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadPersonBuyHistory</servlet-name>
+    <servlet-class>control.ui.LoadPersonBuyHistory</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadPersonBuyHistoryDT</servlet-name>
+    <servlet-class>control.ui.LoadPersonBuyHistoryDT</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadUserInfo</servlet-name>
+    <servlet-class>control.ui.LoadUserInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpDateUserInfo</servlet-name>
+    <servlet-class>control.ui.UpDateUserInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryTradeno</servlet-name>
+    <servlet-class>wechatPay.QueryTradeno</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TradeNoServlet</servlet-name>
+    <servlet-class>wechatPay.TradeNoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginOut</servlet-name>
+    <servlet-class>control.ui.LoginOut</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadLoginInfo</servlet-name>
+    <servlet-class>control.ui.LoadLoginInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Add2ShoppingCart</servlet-name>
+    <servlet-class>control.ui.Add2ShoppingCart</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteShoppingCart_ios</servlet-name>
+    <servlet-class>ios.client.DeleteShoppingCart_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Insert2ShoppingCart_ios</servlet-name>
+    <servlet-class>ios.client.Insert2ShoppingCart_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadADs_ios</servlet-name>
+    <servlet-class>ios.client.LoadADs_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadCatelogs_ios</servlet-name>
+    <servlet-class>ios.client.LoadCatelogs_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadGoods_ios</servlet-name>
+    <servlet-class>ios.client.LoadGoods_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadGoodsBuyHistory_ios</servlet-name>
+    <servlet-class>ios.client.LoadGoodsBuyHistory_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadLoginInfo_ios</servlet-name>
+    <servlet-class>ios.client.LoadLoginInfo_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadPersonBuyHistory_ios</servlet-name>
+    <servlet-class>ios.client.LoadPersonBuyHistory_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadPubHistory_ios</servlet-name>
+    <servlet-class>ios.client.LoadPubHistory_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadRecentPublish_ios</servlet-name>
+    <servlet-class>ios.client.LoadRecentPublish_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadShoppingCart_ios</servlet-name>
+    <servlet-class>ios.client.LoadShoppingCart_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadSoonPublish_ios</servlet-name>
+    <servlet-class>ios.client.LoadSoonPublish_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadUserInfo_ios</servlet-name>
+    <servlet-class>ios.client.LoadUserInfo_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginInfoServlet_ios</servlet-name>
+    <servlet-class>ios.client.LoginInfoServlet_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginOut_ios</servlet-name>
+    <servlet-class>ios.client.LoginOut_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet_ios</servlet-name>
+    <servlet-class>ios.client.RegisterServlet_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpDateUserInfo_ios</servlet-name>
+    <servlet-class>ios.client.UpDateUserInfo_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpLoadGoodsServlet_ios</servlet-name>
+    <servlet-class>ios.client.UpLoadGoodsServlet_ios</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdatePassword</servlet-name>
+    <servlet-class>control.ui.UpdatePassword</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdatePhoneNum</servlet-name>
+    <servlet-class>control.ui.UpdatePhoneNum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PhoneSecurityCheck</servlet-name>
+    <servlet-class>control.ui.PhoneSecurityCheck</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MailSecurityCheck</servlet-name>
+    <servlet-class>control.ui.MailSecurityCheck</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadPubinfo</servlet-name>
+    <servlet-class>control.ui.LoadPubinfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdatePubInfo</servlet-name>
+    <servlet-class>control.ui.UpdatePubInfo</servlet-class>
+  </servlet>
+
+  
+  
+  
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>MainInfoServlet</servlet-name>
+		<url-pattern>/servlet/MainInfoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginInfoServlet</servlet-name>
+		<url-pattern>/servlet/LoginInfoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/servlet/RegisterServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServer</servlet-name>
+		<url-pattern>/servlet/LoginServer</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegistServer</servlet-name>
+		<url-pattern>/servlet/RegistServer</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TestPost</servlet-name>
+		<url-pattern>/servlet/TestPost</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpLoadGoodsServlet</servlet-name>
+		<url-pattern>/servlet/UpLoadGoodsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoadGoods</servlet-name>
+		<url-pattern>/servlet/LoadGoods</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoadGoodsServer</servlet-name>
+		<url-pattern>/servlet/LoadGoodsServer</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyGoodsServlet</servlet-name>
+    <url-pattern>/servlet/BuyGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>testTimestamp</servlet-name>
+    <url-pattern>/servlet/testTimestamp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>testCatelog</servlet-name>
+    <url-pattern>/servlet/testCatelog</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>ShoppingCarServlet</servlet-name>
+    <url-pattern>/servlet/ShoppingCarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/servlet/test</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Insert2ShoppingCart</servlet-name>
+    <url-pattern>/servlet/Insert2ShoppingCart</url-pattern>
+  </servlet-mapping>
+ <servlet-mapping>
+    <servlet-name>LoadCatelogs</servlet-name>
+    <url-pattern>/servlet/LoadCatelogs</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadPublishGoods</servlet-name>
+    <url-pattern>/servlet/LoadPublishGoods</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadADs</servlet-name>
+    <url-pattern>/servlet/LoadADs</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadSoonPublish</servlet-name>
+    <url-pattern>/servlet/LoadSoonPublish</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadRecentPublish</servlet-name>
+    <url-pattern>/servlet/LoadRecentPublish</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>testCompressImg</servlet-name>
+    <url-pattern>/servlet/testCompressImg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>weixinpayServlet</servlet-name>
+    <url-pattern>/servlet/weixinpayServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Wei_xinNotifyServlet</servlet-name>
+    <url-pattern>/servlet/Wei_xinNotifyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteShoppingCart</servlet-name>
+    <url-pattern>/servlet/DeleteShoppingCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadShoppingCart</servlet-name>
+    <url-pattern>/servlet/LoadShoppingCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadPubHistory</servlet-name>
+    <url-pattern>/servlet/LoadPubHistory</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadGoodsBuyHistory</servlet-name>
+    <url-pattern>/servlet/LoadGoodsBuyHistory</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadPersonBuyHistory</servlet-name>
+    <url-pattern>/servlet/LoadPersonBuyHistory</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadPersonBuyHistoryDT</servlet-name>
+    <url-pattern>/servlet/LoadPersonBuyHistoryDT</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadUserInfo</servlet-name>
+    <url-pattern>/servlet/LoadUserInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateUserInfo</servlet-name>
+    <url-pattern>/servlet/UpDateUserInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryTradeno</servlet-name>
+    <url-pattern>/servlet/QueryTradeno</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadLoginInfo</servlet-name>
+    <url-pattern>/servlet/LoadLoginInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginOut</servlet-name>
+    <url-pattern>/servlet/LoginOut</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Add2ShoppingCart</servlet-name>
+    <url-pattern>/servlet/Add2ShoppingCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteShoppingCart_ios</servlet-name>
+    <url-pattern>/servlet/DeleteShoppingCart_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Insert2ShoppingCart_ios</servlet-name>
+    <url-pattern>/servlet/Insert2ShoppingCart_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadADs_ios</servlet-name>
+    <url-pattern>/servlet/LoadADs_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadCatelogs_ios</servlet-name>
+    <url-pattern>/servlet/LoadCatelogs_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadGoods_ios</servlet-name>
+    <url-pattern>/servlet/LoadGoods_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadGoodsBuyHistory_ios</servlet-name>
+    <url-pattern>/servlet/LoadGoodsBuyHistory_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadLoginInfo_ios</servlet-name>
+    <url-pattern>/servlet/LoadLoginInfo_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadPersonBuyHistory_ios</servlet-name>
+    <url-pattern>/servlet/LoadPersonBuyHistory_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadPubHistory_ios</servlet-name>
+    <url-pattern>/servlet/LoadPubHistory_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadRecentPublish_ios</servlet-name>
+    <url-pattern>/servlet/LoadRecentPublish_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadShoppingCart_ios</servlet-name>
+    <url-pattern>/servlet/LoadShoppingCart_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadSoonPublish_ios</servlet-name>
+    <url-pattern>/servlet/LoadSoonPublish_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadUserInfo_ios</servlet-name>
+    <url-pattern>/servlet/LoadUserInfo_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginInfoServlet_ios</servlet-name>
+    <url-pattern>/servlet/LoginInfoServlet_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginOut_ios</servlet-name>
+    <url-pattern>/servlet/LoginOut_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet_ios</servlet-name>
+    <url-pattern>/servlet/RegisterServlet_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateUserInfo_ios</servlet-name>
+    <url-pattern>/servlet/UpDateUserInfo_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpLoadGoodsServlet_ios</servlet-name>
+    <url-pattern>/servlet/UpLoadGoodsServlet_ios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePassword</servlet-name>
+    <url-pattern>/servlet/UpdatePassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePhoneNum</servlet-name>
+    <url-pattern>/servlet/UpdatePhoneNum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PhoneSecurityCheck</servlet-name>
+    <url-pattern>/servlet/PhoneSecurityCheck</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MailSecurityCheck</servlet-name>
+    <url-pattern>/servlet/MailSecurityCheck</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet-mapping>
+    <servlet-name>TradeNoServlet</servlet-name>
+    <url-pattern>/servlet/TradeNoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadPubinfo</servlet-name>
+    <url-pattern>/servlet/LoadPubinfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePubInfo</servlet-name>
+    <url-pattern>/servlet/UpdatePubInfo</url-pattern>
+  </servlet-mapping>
+
+</web-app>
