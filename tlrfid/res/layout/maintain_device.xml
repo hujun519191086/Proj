@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeff3" >
+
+    <LinearLayout
+        android:id="@+id/ll_left_time"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="责任人:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_left_top"
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_left_time"
+        android:layout_margin="@dimen/main_content_marginTop"
+        android:background="@drawable/curriculumvitae_ll_bg"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="48dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="资产编号:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_zichan_no"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:id="@+id/bt_scan_project"
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="资产分类:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_zichan_style"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="资产名称:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_zichan_name"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:id="@+id/bt_scan_person"
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="厂家:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_factory"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="型号:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_style_no"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="购置日期:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_buy_end_time"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="使用期限:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_use_end_time"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="养护类型:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_maintain_style"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="养护周期:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_maintain_period"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="上次养护日期:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_maintain_last_time"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="下次养护日期:"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_maintain_next_time"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_28" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_right"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+
+        <Button
+            android:id="@+id/bt_camera"
+            android:layout_width="@dimen/blue_button_width"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bt_selector"
+            android:padding="5dp"
+            android:text="拍照"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize_32" />
+
+        <Button
+            android:id="@+id/bt_request_photo"
+            android:layout_width="@dimen/blue_button_width"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bt_selector"
+            android:padding="5dp"
+            android:text="上传图片"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize_32" />
+
+        <Button
+            android:id="@+id/bt_safe_create"
+            android:layout_width="@dimen/blue_button_width"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bt_selector"
+            android:padding="5dp"
+            android:text="创建"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize_32" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom_right"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/ll_left_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@id/ll_left_top"
+        android:background="@drawable/no_photo_background" >
+
+        <ImageView
+            android:layout_width="108dp"
+            android:layout_height="76dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cam" />
+
+        <ImageView
+            android:id="@+id/maintain_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</RelativeLayout>

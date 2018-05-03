@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_carType_pic_ll"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#FFDBDBDB"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_carType_pic_selectType"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/brand_detail_select_back"
+            android:gravity="center"
+            android:text="全部分类"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_carType_pic_selectColor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/brand_detail_select_back"
+            android:gravity="center"
+            android:text="全部颜色"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <com.qc188.com.ui.control.PullToRefreshView
+        android:id="@+id/ptv_carType_pic_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <GridView
+            android:id="@+id/gv_carType_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:horizontalSpacing="20dp"
+            android:numColumns="3"
+            android:verticalSpacing="10dp" >
+        </GridView>
+    </com.qc188.com.ui.control.PullToRefreshView>
+
+</LinearLayout>

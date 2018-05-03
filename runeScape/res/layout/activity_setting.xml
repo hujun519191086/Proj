@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="7dp" >
+
+        <Button
+            android:id="@+id/bt_compairCar"
+            style="@style/SettingButton"
+            android:drawableLeft="@drawable/icon_spec_compare"
+            android:text="@string/compair_car" />
+        <Button
+            android:id="@+id/bt_clear_cache"
+            style="@style/SettingButton"
+            android:drawableLeft="@drawable/icon_clear_cache"
+            android:text="@string/clear_data" />
+
+        <Button
+            style="@style/SettingButton"
+            android:drawableLeft="@drawable/icon_feedback"
+            android:text="@string/yijianfankui" />
+
+        <Button
+            android:id="@+id/bt_goto_mainURL"
+            style="@style/SettingButton"
+            android:drawableLeft="@drawable/icon_mobile_autohome"
+            android:text="@string/into_car" />
+
+        <Button
+            android:id="@+id/bt_noPic"
+            style="@style/SettingButton"
+            android:drawableLeft="@drawable/icon_small_image_mode"
+            android:text="@string/no_picture" />
+    </LinearLayout>
+
+</LinearLayout>

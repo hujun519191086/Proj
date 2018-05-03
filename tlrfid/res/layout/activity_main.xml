@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/main_bt_toMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="去主界面" />
+
+    <Button
+        android:id="@+id/main_bt_clickToProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="工程进度管理" />
+
+    <Button
+        android:id="@+id/main_bt_editorCurriculumVitae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="履历编辑" />
+
+    <Button
+        android:id="@+id/main_bt_showCurriculumVitae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="履历一览" />
+    <Button
+        android:id="@+id/main_bt_showLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录" />
+    
+    <Button
+        android:id="@+id/main_bt_showMaintain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="养护" />
+
+</LinearLayout>

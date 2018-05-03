@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeff3" >
+
+    <LinearLayout
+        android:id="@+id/ll_left_top"
+        android:layout_width="500dp"
+        android:layout_height="310dp"
+        android:layout_marginLeft="@dimen/main_content_marginTop"
+        android:layout_marginRight="@dimen/main_content_marginTop"
+        android:layout_marginTop="@dimen/main_content_marginTop"
+        android:background="@drawable/curriculumvitae_ll_bg"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="48dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="巡检项目："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/projectr_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/polling"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <Button
+                android:id="@+id/bt_scan_project"
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="施工人员："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <ListView
+                android:id="@+id/curruculumvitae_lv"
+                android:layout_width="0dp"
+                android:layout_height="135dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/bt_scan_construction_person"
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="完成度："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:orientation="horizontal" >
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:max="100"
+                    android:progress="70"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/thumb"
+                    android:thumbOffset="-1dp" />
+
+                <TextView
+                    android:id="@+id/seekbar_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/curriculumvitae_ll__bottom_bg"
+                    android:gravity="center"
+                    android:text="70"
+                    android:textColor="#28788d"
+                    android:textSize="@dimen/textSize_40" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="%"
+                android:textSize="@dimen/textSize_40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="巡检日期："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_currentTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="@string/construction_time"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_36" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="巡检人员："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张XX"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_30" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/bt_scan_check_person"
+                    android:layout_width="@dimen/blue_button_width"
+                    android:layout_height="@dimen/blue_button_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bt_selector"
+                    android:text="读卡"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textSize_32"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_right"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="@dimen/blue_button_width"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bt_selector"
+            android:onClick="toOpen"
+            android:padding="5dp"
+            android:text="拍照"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize_32"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="@dimen/blue_button_width"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bt_selector"
+            android:padding="5dp"
+            android:text="上传"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize_32"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/bt_write_curriculumvitae"
+            android:layout_width="@dimen/blue_button_width"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bt_selector"
+            android:padding="5dp"
+            android:text="写入履历"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize_32"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@id/ll_left_top"
+        android:layout_below="@id/ll_left_top"
+        android:layout_marginBottom="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/curriculumvitae_ll__bottom_bg"
+        android:orientation="horizontal"
+        android:padding="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:text="备注："
+            android:textColor="#000000"
+            android:textSize="@dimen/textSize_32" />
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:text="人员不够用，缺少材料！！！！！"
+            android:textColor="#000000"
+            android:textSize="@dimen/textSize_32" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom_right"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/ll_left_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@id/ll_left_top"
+        android:background="@drawable/no_photo_background" >
+
+        <ImageView
+            android:layout_width="108dp"
+            android:layout_height="76dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cam" />
+
+        <ImageView
+            android:id="@+id/curriculumvitae_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</RelativeLayout>

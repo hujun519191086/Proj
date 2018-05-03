@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_black"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/ganttchart_back_button_width"
+        android:layout_height="@dimen/ganttchart_back_button_height"
+        android:background="@color/white"
+        android:padding="1px" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_black"
+            android:gravity="center"
+            android:text="工程名称"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_32"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <cn.tlrfid.view.control.VerticalListView
+        android:id="@+id/vlv_gantt_left"
+        android:layout_width="@dimen/ganttchart_back_button_width"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/ganttchart_back_button_height"
+        android:paddingRight="1dp"
+        android:scrollbars="none" >
+    </cn.tlrfid.view.control.VerticalListView>
+
+    <cn.tlrfid.view.control.HorListView
+        android:id="@+id/hlv_gantt_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ganttchart_back_button_height"
+        android:layout_marginLeft="@dimen/ganttchart_back_button_width"
+        android:scrollbars="none" >
+    </cn.tlrfid.view.control.HorListView>
+
+    <cn.tlrfid.view.control.GanttView
+        android:id="@+id/gv_gantt_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/ganttchart_back_button_width"
+        android:layout_marginTop="@dimen/ganttchart_back_button_height"
+        android:scrollbars="none" >
+    </cn.tlrfid.view.control.GanttView>
+
+</RelativeLayout>

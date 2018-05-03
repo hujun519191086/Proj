@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#FFF2F2F2"
+        android:gravity="center"
+        android:text="仅支持2款车型对比,最多添加9款"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_compairSelect_nullMsg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/iv_compairSelect_nullImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/comparelist_is_null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_compairSelect_nullImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="车型库还空着呐 !" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_compairSelect_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/gray" >
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp" >
+
+        <LinearLayout
+            android:id="@+id/rl_compairSelect_clearBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp" >
+
+            <Button
+                android:id="@+id/bt_compairSelect_clearAll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/delete_red_btn_selector"
+                android:padding="0dp"
+                android:text="清空"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/compairSelect_delete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/green_btn_selector"
+                android:padding="0dp"
+                android:text="删除"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_compairSelect_bottomContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFECECEC"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp" >
+
+            <Button
+                android:id="@+id/compairSelect_addCompair"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_btn_selector"
+                android:padding="0dp"
+                android:text="添加车型"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/compairSelect_beginCompair"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/green_btn_selector"
+                android:padding="0dp"
+                android:text="对比"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

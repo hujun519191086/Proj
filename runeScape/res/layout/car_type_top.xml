@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_carType_topContent"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="6dp" >
+
+    <ImageView
+        android:id="@+id/iv_carType_topImage"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="12dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_carType_structure"
+            style="@style/brandTitleStyle" />
+
+        <TextView
+            android:id="@+id/tv_carType_drive"
+            style="@style/brandTitleStyle" />
+
+        <TextView
+            android:id="@+id/tv_carType_drive_gearbox"
+            style="@style/brandTitleStyle" />
+
+        <TextView
+            android:id="@+id/tv_carType_guild_sale"
+            style="@style/brandTitleStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="全国最低价: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/carType_titleTextSize" />
+
+            <TextView
+                android:id="@+id/tv_carType_the_lowest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/red"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_carType_addToCompair"
+        android:layout_width="66dp"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/blue_btn_selector"
+        android:gravity="center"
+        android:text="+对比"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

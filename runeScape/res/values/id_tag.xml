@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="activity_tag" type="id"></item>
+    <item name="fromWhere" type="id"></item>
+    <item name="whereName" type="id"></item>
+
+</resources>

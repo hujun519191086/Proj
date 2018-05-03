@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">智慧工地</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- 巡检点 -->
+    <string name="polling">主控楼</string>
+
+    <!-- 巡检员 -->
+    <string name="polling_person"><u>张**</u></string>
+
+    <!-- 施工人员 -->
+    <string name="construction_person"><u>张**、王**、李**</u></string>
+
+    <!-- 施工日期 -->
+    <string name="construction_time">2014/08/15   &#160;  &#160; 15:33:33</string>
+
+    <!-- 完成百分比 -->
+
+    <string name="construction_progress"><u>50%</u></string>
+    <string name="license_content">免责声明\n\n1、本软件是由航天通联有限公司(以下称本公司)研发。“软件”的一切版权等知识产权，以及与“软件”相关的所有信息内容，包括但不限于：文字表述及其组合、图标、图饰、图表、色彩、界面设计、版面框架、有关数据、印刷材料、或电子文档等均受著作权法和国际著作权条约以及其他知识产权法律法规的保护；\n\n2、使用本产品体检产品前，请仔细阅读随机携带的产品及软件使用说明书；并请在汽车怠速下进行汽车体检操作；在汽车行驶过程中请不要对本产品进行操作；对于在使用本产品过程中发生的交通事故或其他经济损失，本公司不承担任何责任；\n\n3、因不可抗事件影响到服务的正常运行的，本公司承诺在第一时间内与相关单位配合，及时处理进行修复，但用户因此而遭受的经济损失，本公司不承担责任。</string>
+    <string name="qq">2012/3/33 16:12:05</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">正在加载中\u2026</string>
+
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include layout="@layout/view_header" />
+
+    <ListView
+        android:id="@+id/lv_sort_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/dividerColor"
+        android:dividerHeight="2px"
+        android:listSelector="@color/white" >
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="15dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/top_bar"
+        android:background="@drawable/gray_sort_bakcgournd" >
+
+        <com.qc188.com.ui.control.SideBar
+            android:id="@+id/sb_ll_sort_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/hyine"
+            android:orientation="vertical" >
+        </com.qc188.com.ui.control.SideBar>
+    </RelativeLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/dl_search_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:layout_marginLeft="70dp" >
+
+        <FrameLayout
+            android:id="@+id/fl_searchContent_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </FrameLayout>
+
+        <include layout="@layout/search_content_rigthlist" />
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

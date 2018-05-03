@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF67B3D9" />
+
+    <cn.tlrfid.view.control.WarehouseTitle
+        android:id="@+id/wt_warehouse_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+    </cn.tlrfid.view.control.WarehouseTitle>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="#FFCCCCCC" />
+
+    <include layout="@layout/item_warehouse" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFCCCCCC"
+        android:padding="2dp" >
+
+        <cn.tlrfid.view.control.PullToRefreshView
+            android:id="@+id/prv_warehouse_refrshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/lv_warehouse_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@android:color/transparent"
+                android:minHeight="100dp" >
+            </ListView>
+        </cn.tlrfid.view.control.PullToRefreshView>
+    </RelativeLayout>
+
+</LinearLayout>

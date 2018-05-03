@@ -1,0 +1,17 @@
+
+// �ļ�˵��
+
+
+
+
+
+XML  ˵��
+
+activity_program_item    ��̨����item ����
+activity_login           ��¼����
+activity_regist          ע�����
+activity_personcenter    ��������
+
+
+
+剩下的事情:热词,推荐,刪除各種東西,推送

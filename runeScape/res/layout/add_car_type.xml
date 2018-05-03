@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_header" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.qc188.com.ui.control.BrandDetailContent
+            android:id="@+id/bdc_addCarType_Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.qc188.com.ui.control.BrandDetailContent>
+    </ScrollView>
+
+</LinearLayout>

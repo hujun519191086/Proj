@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeff3" >
+
+    <LinearLayout
+        android:id="@+id/ll_left_top"
+        android:layout_width="500dp"
+        android:layout_height="310dp"
+        android:layout_marginLeft="@dimen/main_content_marginTop"
+        android:layout_marginRight="@dimen/main_content_marginTop"
+        android:layout_marginTop="@dimen/main_content_marginTop"
+        android:background="@drawable/curriculumvitae_ll_bg"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="48dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="巡检项目："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_project"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <Button
+                android:id="@+id/bt_scan_project"
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="责任人员："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_check_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <Button
+                android:id="@+id/bt_scan_person"
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="整改期限："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <EditText
+                android:id="@+id/et_overhaulLimit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="5(请输入数字)"
+                android:inputType="number"
+                android:numeric="integer"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <Button
+                android:layout_width="@dimen/blue_button_width"
+                android:layout_height="@dimen/blue_button_height"
+                android:background="@drawable/bt_selector"
+                android:text="读卡"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textSize_32"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="检查内容："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="合格"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="不合格"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/polling_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_right"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_camera"
+            android:layout_width="@dimen/blue_button_width"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bt_selector"
+            android:padding="5dp"
+            android:text="拍照"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize_32" />
+
+        <Button
+            android:id="@+id/bt_request_photo"
+            android:layout_width="@dimen/blue_button_width"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bt_selector"
+            android:padding="5dp"
+            android:text="上传图片"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize_32" />
+
+        <Button
+            android:id="@+id/bt_safe_create"
+            android:layout_width="@dimen/blue_button_width"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bt_selector"
+            android:padding="5dp"
+            android:text="创建"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize_32" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="巡检日期："
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_32" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/construction_time"
+                android:textColor="#000000"
+                android:textSize="@dimen/textSize_36" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@id/ll_left_top"
+        android:layout_below="@id/ll_left_top"
+        android:layout_marginBottom="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/curriculumvitae_ll__bottom_bg"
+        android:orientation="horizontal"
+        android:padding="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:text="备注："
+            android:textColor="#000000"
+            android:textSize="@dimen/textSize_32" />
+
+        <EditText
+            android:id="@+id/et_remark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:text="人员不够用，缺少材料！！！！！"
+            android:textColor="#000000"
+            android:textSize="@dimen/textSize_32" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom_right"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/ll_left_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@id/ll_left_top"
+        android:background="@drawable/no_photo_background" >
+
+        <ImageView
+            android:layout_width="108dp"
+            android:layout_height="76dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cam" />
+
+        <ImageView
+            android:id="@+id/safety_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</RelativeLayout>

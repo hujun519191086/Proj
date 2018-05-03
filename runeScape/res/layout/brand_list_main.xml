@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/sv_brandDetail_contentScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rl_brandDetail_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <include layout="@layout/brand_detail_top_msg" />
+
+            <com.qc188.com.ui.control.BrandDetailContent
+                android:id="@+id/bdc_brandDetail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_brandList_topContent" >
+            </com.qc188.com.ui.control.BrandDetailContent>
+
+            <TextView
+                android:id="@+id/tv_brandDetail_showStopSale"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/bdc_brandDetail_content"
+                android:gravity="center"
+                android:text="点击显示停售车型"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

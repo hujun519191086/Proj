@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="gantt_content_title_id" type="id"></item>
+    <item name="tag_second_id" type="id"></item>
+    <item name="tag_search_tagCode" type="id"></item>
+
+</resources>

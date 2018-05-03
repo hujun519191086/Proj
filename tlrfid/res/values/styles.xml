@@ -1,0 +1,90 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="projectmanager_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="mainviewpater_bottomText_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textSize_30</item>
+        <!--
+        <item name="android:layout_marginLeft">@dimen/mainviewpager_bottom_button_margin</item>
+        <item name="android:layout_marginRight">@dimen/mainviewpager_bottom_button_margin</item>
+        -->
+    </style>
+
+    <style name="item_progressquery_columnMiddleText">
+        <item name="android:layout_width">@dimen/progressquery_title_middleText_width</item>
+        <item name="android:background">@color/progressquery_title_middleTextBackground</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="item_progressquery_column">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/textSize_36</item>
+    </style>
+
+    <style name="item_progressquert_column2" parent="item_progressquery_column">
+        <item name="android:layout_weight">5</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="item_progressquery_column3" parent="item_progressquery_column">
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <style name="item_progressquery_column4" parent="item_progressquery_column">
+        <item name="android:layout_weight">4</item>
+    </style>
+
+    <style name="item_progressquery_column5" parent="item_progressquery_column">
+        <item name="android:layout_weight">4</item>
+    </style>
+
+    <style name="item_progressquery_column6" parent="item_progressquery_column">
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <style name="item_progressquery_column7" parent="item_progressquery_column">
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <style name="item_progressquery_column8" parent="item_progressquery_column">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <style name="myCheckBoxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_selector</item>
+    </style>
+
+</resources>

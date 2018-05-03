@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_regist_title"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@drawable/regist_red_bg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/regist_note_text"
+                android:textColor="@color/color_dee1e6"
+                android:textSize="19sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical" >
+
+                <LinearLayout style="@style/login_llbg_style" >
+
+                    <ImageView
+                        android:id="@+id/regist_userName_image"
+                        style="@style/login_iamgebtn_style"
+                        android:src="@drawable/people_red" />
+
+                    <EditText
+                        android:id="@+id/ed_regist_username"
+                        style="@style/login_eidt_style"
+                       
+                        android:hint="用户名" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/login_llbg_style" >
+
+                    <ImageView
+                        android:id="@+id/regist_phone_image"
+                        style="@style/login_iamgebtn_style"
+                        android:src="@drawable/phone_red" />
+
+                    <EditText
+                        android:id="@+id/ed_regist_phone"
+                        style="@style/login_eidt_style"
+                        android:hint="请输入手机号"
+                        android:phoneNumber="true" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/login_llbg_style" >
+
+                    <ImageView
+                        android:id="@+id/regist_password_image"
+                        style="@style/login_iamgebtn_style"
+                        android:src="@drawable/suo_red" />
+
+                    <EditText
+                        android:id="@+id/ed_regist_password"
+                        style="@style/login_eidt_style"
+                        android:hint="创建密码"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/login_llbg_style" >
+
+                    <ImageView
+                        android:id="@+id/regist_repassword_image"
+                        style="@style/login_iamgebtn_style"
+                        android:src="@drawable/suo_red" />
+
+                    <EditText
+                        android:id="@+id/ed_regist_repassword"
+                        style="@style/login_eidt_style"
+                        android:hint="确认密码"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_regist_registbtn"
+                    style="@style/common_button_style"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/regist_registbtn" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

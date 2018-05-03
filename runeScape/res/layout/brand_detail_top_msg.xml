@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:id="@+id/ll_brandList_topContent"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_brandList_topImage"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_brandDetail_level"
+            style="@style/brandTitleStyle" />
+
+        <TextView
+            android:id="@+id/tv_brandDetail_engine"
+            style="@style/brandTitleStyle" />
+
+        <TextView
+            android:id="@+id/tv_brandDetail_transmission"
+            style="@style/brandTitleStyle" />
+
+        <TextView
+            android:id="@+id/tv_brandDetail_guideSale"
+            style="@style/brandTitleStyle" />
+    </LinearLayout>
+
+</LinearLayout>

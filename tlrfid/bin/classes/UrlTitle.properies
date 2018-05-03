@@ -1,0 +1,8 @@
+ProjectScheduleBean=projectScheduleList
+PersonCardBean=person
+ScheduleCardBean=schedule
+ProjectCardBean=schedule
+QualityRecordBean=recordPage
+SafetyItemBean=entryList
+DeviceDetailBean=device
+DeviceHelpBean=deviceList

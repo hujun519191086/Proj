@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/tv_item_CompairSelect_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="45dp"
+        android:gravity="center_vertical"
+        android:text="123"
+        android:textColor="#FF8293A6" />
+
+    <CheckBox
+        android:id="@+id/cb_item_CompairSelect_checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:button="@drawable/check_box_selector"
+        android:checked="true"
+        android:gravity="center_vertical" />
+
+</RelativeLayout>

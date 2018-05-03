@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/left_list_width"
+    android:layout_height="match_parent"
+    android:background="#FFCBD0D4"
+    android:orientation="vertical"
+    android:paddingRight="1dp" >
+
+    <TextView
+        android:id="@+id/left_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_content_marginTop"
+        android:background="@color/projectmanager_left_list_background" />
+
+    <ListView
+        android:id="@+id/left_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/left_top"
+        android:background="@color/projectmanager_left_list_background"
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/projectmanager_left_list_select" >
+    </ListView>
+
+</RelativeLayout>

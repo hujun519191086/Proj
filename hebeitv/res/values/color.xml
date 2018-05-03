@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- 基础色调 -->
+    <color name="black">#000000</color>
+    <color name="common_red">#f04200</color>
+    <color name="white">#ffffff</color>
+    <color name="common_bg">#f3f3f3</color>
+    <color name="color_dee1e6">#dee1e6</color>
+    <color name="color_f14100">#f14100</color>
+    <color name="color_828282">#828282</color>
+    <color name="color_f0f2f5">#f0f2f5</color>
+    <color name="blue">#5F9F9F</color>
+    <color name="green">#FF00FF00</color>
+    <color name="red">#FFFF0000</color>
+    <color name="orange">#FF6633</color>
+    <color name="transparent">#0000</color>
+
+</resources>

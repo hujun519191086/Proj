@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="37dp"
+    android:paddingRight="37dp" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp" >
+
+        <EditText
+            android:id="@+id/et_search_content"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:hint="请输入关键字"
+            android:maxLength="15"
+            android:paddingBottom="0dp"
+            android:paddingLeft="7dp"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_search_click"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|right"
+            android:paddingRight="7dp"
+            android:scaleType="fitCenter" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="17dp"
+        android:text="推荐"
+        android:textColor="#FFC8C8C8" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#FFC8C8C8" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="11dp"
+        android:textColor="#FF858585" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="17dp"
+        android:text="热词"
+        android:textColor="#FFC8C8C8" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginBottom="15dp"
+        android:background="#FFC8C8C8" />
+
+    
+    <TableLayout
+         android:layout_width="match_parent"
+         android:shrinkColumns="1,2,3,4,5,6,7,8,9,10,11,12,13"
+         android:id="@+id/tl_search_hotWord"
+        android:layout_height="match_parent">
+        
+        <TableRow >
+            
+     
+            
+        </TableRow>
+        
+    </TableLayout>
+
+</LinearLayout>

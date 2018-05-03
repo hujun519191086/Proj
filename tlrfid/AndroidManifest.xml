@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.tlrfid"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="cn.tlrfid.view.TlrfidApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_stub"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:screenOrientation="landscape"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="cn.tlrfid.view.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.ProgressQueryActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.CurriculumVitae_Create_Activity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.WarehouseManagerActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.CurriculumVitae_Query_Activity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.MainViewPagerActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.QualityManagerActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.GanttChartActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.MaintainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.Quality_Query_Activity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.ProjectManageActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.DeviceManagerActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.QualitySelfeActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.CurriculumVitae_Update_Activity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.Polling_Query_Activity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.SafetyCreateActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.PollingUpdateActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.CardSendActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.ProjectRecoderCheck"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.SelfManagerProject"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.QualityCreateActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.SelfCheckedActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.CheckedActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.SelfNeedCheckedProjectActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.QualityManagerProject"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.QualityCheckedActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.QualityNeedCheckedProjectActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.Maintain_Device_Activity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.tlrfid.view.MaintenanceReminders"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+    </application>
+
+</manifest>

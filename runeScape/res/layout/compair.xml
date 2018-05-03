@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/tw_compair_titleTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:background="#ff656565"
+        android:padding="5dp" >
+
+        <include
+            android:id="@+id/tw_compair_titleTab1"
+            layout="@layout/compair_tab_row" />
+
+        <include
+            android:id="@+id/tw_compair_titleTab2"
+            layout="@layout/compair_tab_row" />
+
+        <include
+            android:id="@+id/tw_compair_titleTab3"
+            layout="@layout/compair_tab_row" />
+
+        <include
+            android:id="@+id/tw_compair_titleTab4"
+            layout="@layout/compair_tab_row" />
+    </TableLayout>
+
+    <include layout="@layout/view_header" />
+
+    <TextView
+        android:id="@+id/tw_compair_showTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tw_compair_titleTab"
+        android:background="@drawable/compair_title_selector"
+        android:gravity="center_horizontal"
+        android:text="多媒体配置"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tw_compair_showTitleText"
+        android:background="#FFDADBDD"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal"
+            android:paddingTop="1px" >
+
+            <RelativeLayout
+                android:id="@+id/tv_compairContent_leftAddCar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/iv_compair_addMoreLeftImage"
+                    android:gravity="center"
+                    android:text="+添加车型"
+                    android:textColor="#FF3C70BC"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_compair_addMoreLeftImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/comparelist_is_null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tv_compairContent_leftcar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_compairContent_leftTopName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFF5F6F8"
+                    android:gravity="center"
+                    android:text="迈宝瑞"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_compairContent_leftDelete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/spec_compare_close" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="1px"
+                    android:layout_marginRight="1px"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/cb_compairContent_showAll_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFF8F8F8"
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:text="全部参数"
+                        android:textColor="#FF1562B8"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/cb_compairContent_showAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:gravity="center_vertical" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="1px"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/cb_compairContent_showdif_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFF5F6F8"
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:text="显示不同"
+                        android:textColor="#FFC2D2DA" />
+
+                    <CheckBox
+                        android:id="@+id/cb_compairContent_showdif"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/tv_compairContent_rightAddCar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/iv_compair_addMoreLeftImage"
+                    android:gravity="center"
+                    android:text="+添加车型"
+                    android:textColor="#FF3C70BC"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_compair_addMoreLeftImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/comparelist_is_null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tv_compairContent_rightcar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_compairContent_rightTopName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFF5F6F8"
+                    android:gravity="center"
+                    android:text="迈宝瑞"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_compairContent_rightDelete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/spec_compare_close" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tv_compairContent_inloading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#FF858688"
+                android:textSize="20sp" />
+
+            <ExpandableListView
+                android:id="@+id/elv_compairContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ExpandableListView>
+
+            <TextView
+                android:id="@+id/tv_compairContent_flower"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#FFDADBDD"
+                android:gravity="center"
+                android:textColor="#FF858688"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

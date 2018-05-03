@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <com.hebeitv.news.view.control.ImageDownloadView
+        android:id="@+id/item_paike_center_img"
+        android:layout_width="85dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="29dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp" />
+
+    <TextView
+        android:id="@+id/item_paike_center_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="42dp"
+        android:gravity="center_vertical"
+        android:text="1iushdfhjhsdhfshkfjasdhfshafjksdhjfakjefkjlhaeasdfsdfkjsadhfshldkfhkjsdhfskfhaehkfaweflaefhawefhjhk"
+        android:textColor="#FF626363"
+        android:textSize="17sp" />
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="27dp"
+        android:paddingRight="27dp"
+        android:paddingTop="15dp" >
+
+        <EditText
+            android:id="@+id/ed_moment_think"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:gravity="left|top"
+            android:hint="这一刻的想法......"
+            android:maxLength="100"
+            android:minLines="3"
+            android:textColor="@color/black"
+            android:textColorHint="#FF787878"
+            android:textSize="17sp" />
+
+        <GridView
+            android:id="@+id/gv_moment_videos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="5dp"
+            android:numColumns="5"
+            android:verticalSpacing="5dp" >
+        </GridView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_moment_bigPic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

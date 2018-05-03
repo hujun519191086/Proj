@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/progressquery_title_height"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/progressquery_tv_plan"
+        style="@style/item_progressquert_column2"
+        android:text="计划名称"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/progressquery_tv_planType"
+        style="@style/item_progressquery_column3"
+        android:text="是否有子条目"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/progressquery_tv_startTime"
+        style="@style/item_progressquery_column4"
+        android:text="计划开始时间"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/progressquery_tv_endTime"
+        style="@style/item_progressquery_column5"
+        android:text="计划完成时间"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/progressquery_tv_limitTime"
+        style="@style/item_progressquery_column6"
+        android:text="计划工期"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/progressquery_tv_completeProgress"
+        style="@style/item_progressquery_column7"
+        android:text="完成度"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/progressquery_tv_details"
+        style="@style/item_progressquery_column8"
+        android:text="详情"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+</LinearLayout>

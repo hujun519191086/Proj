@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg2"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mainviewpager_vp_changeMood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="@dimen/mainviewpager_selectBottom_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@color/mainviewpager_selectBottom_background"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/mainviewpager_tv_safety"
+            style="@style/mainviewpater_bottomText_style"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/login_line"
+            android:gravity="center"
+            android:text="质量/安全"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/mainviewpater_tv_safety_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainviewpager_bottom_button_top_height"
+            android:layout_alignLeft="@+id/mainviewpager_tv_safety"
+            android:layout_alignRight="@+id/mainviewpager_tv_safety"
+            android:background="@color/mainviewpager_bottom_button_title"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mainviewpager_tv_progress"
+            style="@style/mainviewpater_bottomText_style"
+            android:layout_toLeftOf="@id/mainviewpager_tv_safety"
+            android:layout_weight="1"
+            android:background="#0000ff"
+            android:drawableRight="@drawable/login_line"
+            android:gravity="center"
+            android:text="进度管理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_36" />
+
+        <TextView
+            android:id="@+id/mainviewpater_tv_progress_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainviewpager_bottom_button_top_height"
+            android:layout_alignLeft="@+id/mainviewpager_tv_progress"
+            android:layout_alignRight="@+id/mainviewpager_tv_progress"
+            android:background="@color/mainviewpager_bottom_button_title"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mainviewpager_tv_deviceManager"
+            style="@style/mainviewpater_bottomText_style"
+            android:layout_toRightOf="@id/mainviewpager_tv_safety"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="设备管理"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mainviewpater_tv_deviceManager_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainviewpager_bottom_button_top_height"
+            android:layout_alignLeft="@+id/mainviewpager_tv_deviceManager"
+            android:layout_alignRight="@+id/mainviewpager_tv_deviceManager"
+            android:background="@color/mainviewpager_bottom_button_title"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

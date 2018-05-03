@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_main">16sp</dimen>
+    <dimen name="text_sub">16sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_tab">14sp</dimen>
+    <dimen name="main_titleText">14sp</dimen>
+    <dimen name="header_height">40dp</dimen>
+    <dimen name="nav_height">45dp</dimen>
+    <dimen name="nav_icon_height">40dp</dimen>
+    <dimen name="padding_min">2dp</dimen>
+    <dimen name="padding_micro">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="icon_height">60dp</dimen>
+    <dimen name="icon_width">80dp</dimen>
+    <dimen name="login_margin">40dp</dimen>
+    <dimen name="corner_radius">8dp</dimen>
+    <dimen name="tab_height">58dp</dimen>
+    <dimen name="tab_icon_size">35dp</dimen>
+    <dimen name="slider_height">180dp</dimen>
+    <dimen name="item_function_image">120dp</dimen>
+    <dimen name="item_setting_height">40dp</dimen>
+    <dimen name="sort_touch_textSize">8sp</dimen>
+    <dimen name="sort_touch_item_textSize">10sp</dimen>
+    <dimen name="carTypeSaleTextSize">10sp</dimen>
+    <dimen name="carType_titleTextSize">12sp</dimen>
+    
+
+</resources>

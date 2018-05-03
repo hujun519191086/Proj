@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <View
+        android:layout_width="0px"
+        android:layout_height="35dp" />
+
+    <TextView
+        android:id="@+id/tv_compair_item_child_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1px"
+        android:layout_weight="1"
+        android:background="#ffF5F6F8"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_compair_item_child_middle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1px"
+        android:layout_marginLeft="1px"
+        android:layout_marginRight="1px"
+        android:layout_weight="1"
+        android:background="#FFF1F2F6"
+        android:gravity="center"
+        android:textColor="#FF858688" />
+
+    <TextView
+        android:id="@+id/tv_compair_item_child_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1px"
+        android:layout_weight="1"
+        android:background="#ffF5F6F8"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>

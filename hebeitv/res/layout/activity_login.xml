@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shangmiantu" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@drawable/regist_red_bg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/login_note_text"
+                android:textColor="@color/color_dee1e6"
+                android:textSize="@dimen/common_textsize_37px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/login_graytext_style"
+                    android:text="@string/login_username" />
+
+                <LinearLayout style="@style/login_llbg_style" >
+
+                    <ImageView
+                        style="@style/login_iamgebtn_style"
+                        android:src="@drawable/people_red" />
+
+                    <EditText
+                        android:id="@+id/ed_login_username"
+                        style="@style/login_eidt_style"
+                        android:hint="请输入用户名/手机号" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/login_graytext_style"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/login_password" />
+
+                <LinearLayout style="@style/login_llbg_style" >
+
+                    <ImageView
+                        style="@style/login_iamgebtn_style"
+                        android:src="@drawable/suo_red" />
+
+                    <EditText
+                        android:id="@+id/ed_login_password"
+                        style="@style/login_eidt_style"
+                        android:hint="请输入密码"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ed_login_loginbtn"
+                    style="@style/common_button_style"
+                    android:text="@string/login_login" />
+
+                <TextView
+                    android:id="@+id/ed_login_registbtn"
+                    style="@style/login_graytext_style"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/login_regist" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

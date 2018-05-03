@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <com.hebeitv.news.view.control.ImageDownloadView
+        android:id="@+id/item_main_list_pic"
+        android:layout_width="109dp"
+        android:layout_height="71dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bentaijiemu_dianji" />
+
+    <TextView
+        android:id="@+id/item_main_list_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:maxLines="5"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+</LinearLayout>

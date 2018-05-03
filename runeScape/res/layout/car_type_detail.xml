@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/tw_carType_detail_titleTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff656565"
+        android:padding="5dp" >
+
+        <include layout="@layout/compair_tab_row" />
+
+        <include layout="@layout/compair_tab_row" />
+
+        <include layout="@layout/compair_tab_row" />
+
+        <include layout="@layout/compair_tab_row" />
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tw_carType_detail_showTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tw_carType_detail_titleTab"
+        android:background="@drawable/compair_title_selector"
+        android:gravity="center_horizontal"
+        android:text="多媒体配置"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tw_carType_detail_showTitleText"
+        android:background="#FFDADBDD"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tv_compairContent_inloading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#FF858688"
+                android:textSize="20sp" />
+
+            <ExpandableListView
+                android:id="@+id/elv_carType_Content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ExpandableListView>
+
+            <TextView
+                android:id="@+id/tv_carType_flower"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#FFDADBDD"
+                android:gravity="center"
+                android:textColor="#FF858688"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

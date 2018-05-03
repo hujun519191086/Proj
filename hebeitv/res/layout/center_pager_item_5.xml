@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="9dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:text="优秀员工"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/center_pager_goodJob"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" >
+
+            <include layout="@layout/item_good_job" />
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/item_good_job" />
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/item_good_job" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="18dp"
+            android:text="工作场景"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/center_pager_workSpace"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="18dp" >
+
+            <include layout="@layout/item_work_space" />
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/item_work_space" />
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/item_work_space" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="20dp"
+            android:text="工作环境"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <com.hebeitv.news.view.control.ImageDownloadView
+            android:id="@+id/iv_work_around1"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone" />
+
+        <com.hebeitv.news.view.control.ImageDownloadView
+            android:id="@+id/iv_work_around2"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone" />
+
+        <com.hebeitv.news.view.control.ImageDownloadView
+            android:id="@+id/iv_work_around3"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</ScrollView>

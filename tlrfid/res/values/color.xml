@@ -1,0 +1,21 @@
+<resources>
+ 
+    <color name="progressquery_title_background">#AA222222</color>
+    <color name="progressquery_title_middleTextBackground">#FFEE4522</color>
+    <color name="background">#FF9EA0A2</color>
+    <color name="black">#FF000000</color>
+    <color name="gray_black">#99000000</color>
+    <color name="yellow">#FFFFFF00</color>
+    <!-- <color name="mainviewpager_bottom_button_title">#FF248AD9</color> -->
+    <color name="mainviewpager_bottom_button_title">#FFFFFF</color>
+    <color name="mainviewpager_selectBottom_background">#44cccccc</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#FFCCCCCC</color>
+    <color name="mainviewpager_bottom_text_select_color">#FF181614</color>
+    <color name="projectmanager_right_title_color">#FF9DBECF</color>
+    <color name="projectmanager_left_list_background">#FFEAEFF3</color>
+    <color name="projectmanager_left_list_select">#FF408EA2</color>
+    <color name="main_content_stroke">#FF28788D</color>
+    <color name="projectmessage_item_bg">#FF408EA2</color>
+
+</resources>

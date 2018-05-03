@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="10dp"
+    android:paddingRight="37dp"
+    android:paddingTop="10dp" >
+
+    <CheckBox
+        android:id="@+id/iv_myRead_left_point"
+        android:layout_width="34dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:button="@drawable/check_box"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible" />
+
+    <com.hebeitv.news.view.control.ImageDownloadView
+        android:id="@+id/tv_myRead_pic"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/iv_myRead_left_point"
+        android:paddingTop="5dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_myRead_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_myRead_pic"
+        android:text="家有萌宝"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_myRead_second_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_myRead_title"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/tv_myRead_pic"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_myRead_deleteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#FFF14100"
+        android:padding="2dp"
+        android:text="删除"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/tv_item_carType_TitleName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_item_carType_saleNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_item_carType_sales"
+        android:gravity="right"
+        android:textColor="#FFD60915"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/tv_item_carType_sales"
+        android:layout_width="28dp"
+        android:layout_height="12dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_sales" />
+
+    <TextView
+        android:id="@+id/tv_item_carType_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_item_carType_TitleName"
+        android:layout_marginTop="4dp"
+        android:drawableLeft="@drawable/ic_location"
+        android:gravity="center_vertical"
+        android:textColor="#FF939393"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_item_carType_index"
+        android:layout_marginTop="3dp" >
+
+        <TextView
+            android:id="@+id/tv_item_carType_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_btn_selector"
+            android:drawableLeft="@drawable/ic_phone"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="立即拨打电话"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_item_carType_saleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_item_carType_phone"
+            android:background="@drawable/gray_circel"
+            android:ems="2"
+            android:gravity="center"
+            android:maxEms="2"
+            android:padding="1dp"
+            android:text="24h"
+            android:textColor="@color/white"
+            android:textSize="@dimen/carTypeSaleTextSize" />
+
+        <TextView
+            android:id="@+id/tv_item_carType_saleArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_item_carType_saleTime"
+            android:background="@drawable/gray_corners"
+            android:ems="2"
+            android:gravity="center"
+            android:maxEms="2"
+            android:padding="1dp"
+            android:text="售本市"
+            android:textColor="@color/white"
+            android:textSize="@dimen/carTypeSaleTextSize" />
+    </RelativeLayout>
+
+</RelativeLayout>

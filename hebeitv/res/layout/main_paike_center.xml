@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.hebeitv.news.control.RefreshLayout
+        android:id="@+id/rl_paike_center_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/lv_paike_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#D2D2D2"
+            android:dividerHeight="2px"
+            android:paddingTop="12dp" >
+        </ListView>
+    </com.hebeitv.news.control.RefreshLayout>
+
+</LinearLayout>
